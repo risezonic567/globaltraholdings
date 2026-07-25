@@ -5,6 +5,7 @@ on:
    branches:
      - main
 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,24 +13,21 @@ jobs:
     steps:
       - name: ssh deploy
         uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/globaltraholdings
 
-        with:  
-         host: ${{secrets.SSH_HOST}}
-         username: root  
-         key: ${{secrets.SSH_KEY}}
-         script: |
-       
-          cd /var/www/globaltravelholdigs
+            git pull origin main
 
-          git pull origin main
+            docker compose down
 
-          docker-compose down
+            docker system prune -f
 
-          docker system prune -f
+            docker compose build --no-cache
 
-          docker-compose build --no-cache
+            docker compose up -d
 
-          docker-compose up -d
-
-          docker ps -a 
- 
+            docker ps -a
