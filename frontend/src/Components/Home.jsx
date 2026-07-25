@@ -86,7 +86,6 @@ export default function Home() {
         />
     </div>
 
-    {/* Left Dots */}
     <div className="absolute top-24 left-10 grid grid-cols-4 gap-4 opacity-20">
         {[...Array(12)].map((_, i) => (
             <div
@@ -96,7 +95,6 @@ export default function Home() {
         ))}
     </div>
 
-    {/* Main Content */}
     <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16">
 
         <div className="flex flex-col items-center text-center mb-12">
