@@ -53,9 +53,7 @@ export default function FlightAbout() {
                             key={i}
                             className="group bg-white rounded-3xl border border-gray-100 p-7 shadow-xl shadow-black/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                         >
-                            {/* <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center text-3xl mb-6 shadow-lg">
-                    {item.icon}
-                </div> */}
+                          
 
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-500 transition">
                                 {item.title}
