@@ -250,7 +250,7 @@ export default function Cruise() {
         className='py-10 mx-auto px-3 text-center'
       >
         <NavLink
-          to="tel:+1 8888434146"
+          
           className="w-full sm:w-auto p-3 px-8 rounded-xl bg-gradient-to-r from-green-500 to-gray-500 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer text-sm sm:text-base font-semibold text-white"
         >
           Book Now ?
