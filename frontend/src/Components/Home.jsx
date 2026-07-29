@@ -7,6 +7,7 @@ import HotelStay from './HotelStay'
 import Testimonials from './Testimonials'
 import Faq from './Faq'
 import BookingForm from './HomeFlightSearch'
+import {Helmet} from 'react-helmet-async'
 
 export default function Home() {
     const videoRef = useRef(null)
@@ -19,6 +20,11 @@ export default function Home() {
 
     return (
         <>
+            <Helmet>
+                   <link rel="canonical" href="https://www.globaltravel-holdings.com/" />
+            </Helmet>
+
+
             <section className="relative w-full min-h-screen overflow-hidden">
                 <video
                     src="/video/Home Page Video.mp4"
