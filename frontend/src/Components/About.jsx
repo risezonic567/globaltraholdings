@@ -8,12 +8,17 @@ import OurServices from './OurServices'
 import WhyChosseus from './WhyChosseus'
 import ExperienceWithExpert from './ExperienceWithExpert'
 import MissionVision from './OurMission'
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
 
     return (
 
         <>
+
+        <Helmet>
+                 <link rel="canonical" href="https://www.globaltravel-holdings.com/about-us" />
+        </Helmet>
 
             {/* HERO SECTION */}
 

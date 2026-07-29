@@ -3,6 +3,7 @@ import { CalendarDays, MapPin } from 'lucide-react'
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
+import { Helmet } from 'react-helmet-async'
 import { NavLink } from 'react-router-dom'
 
 
@@ -25,6 +26,11 @@ export default function Car() {
 
   return (
     <>
+       <Helmet>
+                
+                <link rel="canonical" href="https://www.globaltravel-holdings.com/cars" />
+            </Helmet>
+
      <section className='relative w-full h-[650px] overflow-hidden'>
 
   <motion.img

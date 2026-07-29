@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 import { fetchFlights } from '../redux/FlightSlice';
 import FlightAbout from './FlightAbout';
+import { Helmet } from 'react-helmet-async';
 
 export default function Flights() {
 
@@ -130,6 +131,15 @@ export default function Flights() {
 
     return (
         <>
+
+        <Helmet>
+            
+            <link rel="canonical" href="https://www.globaltravel-holdings.com/flights" />
+        </Helmet>
+
+
+
+
            <motion.section
     initial={{ opacity: 0, scale: 1.05 }}
     animate={{ opacity: 1, scale: 1 }}

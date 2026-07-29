@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <>
             <Helmet>
-                <title>Home</title>
+                
                    <link rel="canonical" href="https://www.globaltravel-holdings.com/" />
             </Helmet>
 

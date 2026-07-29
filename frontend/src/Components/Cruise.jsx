@@ -5,6 +5,7 @@ import Testimonials from './Testimonials'
 import CruiseDestination from './CruiseDestination'
 import { NavLink } from 'react-router-dom'
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet-async'
 
 export default function Cruise() {
   const fadeUp = {
@@ -22,6 +23,11 @@ export default function Cruise() {
 
   return (
     <>
+   <Helmet>
+            
+            <link rel="canonical" href="https://www.globaltravel-holdings.com/cruise" />
+        </Helmet>
+
       <section className='w-full relative h-[70vh] md:h-[85vh] overflow-hidden'>
 
         <motion.img

@@ -2,6 +2,7 @@ import { Container, icons } from 'lucide-react';
 import React from 'react';
 import { motion, scale, stagger } from "framer-motion";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function OurServices() {
 
@@ -107,6 +108,12 @@ export default function OurServices() {
   }
 
   return (
+    <>
+     <Helmet>
+                    
+                    <link rel="canonical" href="https://www.globaltravel-holdings.com/services" />
+                </Helmet>
+    
     <section className='max-w-7xl mx-auto  py-5'>
 
       <motion.div
@@ -188,5 +195,6 @@ export default function OurServices() {
         })}
       </motion.div>
     </section>
+    </>
   );
 }

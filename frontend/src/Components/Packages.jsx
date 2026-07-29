@@ -3,6 +3,7 @@ import { worldwidepackage } from '../data/packages/worldwidepackage'
 import { CarFrontIcon, Hotel, Plane, Star } from 'lucide-react'
 import { honymoonpackage } from '../data/packages/honymoonpackage'
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet-async';
 
 export default function Packages() {
 
@@ -18,7 +19,12 @@ export default function Packages() {
         : honymoonpackage.slice(0, 6)
 
     return (
-        <div className='bg-gradient-to-b from-gray-50 to-white'>
+        <>
+           <Helmet>
+                    
+                    <link rel="canonical" href="https://www.globaltravel-holdings.com/packages" />
+                </Helmet>
+                  <div className='bg-gradient-to-b from-gray-50 to-white'>
 
 
             <section className="relative w-full h-[75vh] md:h-[90vh] overflow-hidden">
@@ -354,5 +360,7 @@ export default function Packages() {
             </section>
 
         </div>
+        </>
+      
     )
 }

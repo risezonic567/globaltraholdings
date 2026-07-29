@@ -7,6 +7,7 @@ import Property from './Property';
 import Testimonials from './Testimonials';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 export default function Hotels() {
 
@@ -27,6 +28,10 @@ export default function Hotels() {
 
     return (
         <>
+           <Helmet>
+                    
+                    <link rel="canonical" href="https://www.globaltravel-holdings.com/hotels" />
+                </Helmet>
 
             <section className='w-full h-[70vh] md:h-[85vh] relative z-50'>
                 <motion.div

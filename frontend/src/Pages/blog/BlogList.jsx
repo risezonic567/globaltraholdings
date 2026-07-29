@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { ArrowRight, CalendarDays, Clock, Eye, Heart } from 'lucide-react'
 import { useEffect } from 'react'
 import { useMemo } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 export default function BlogList() {
 
@@ -44,6 +45,11 @@ export default function BlogList() {
 
     return (
         <>
+
+        <Helmet>
+
+            <link rel="conanical" href="https://www.globaltravel-holdings.com/blog" />
+        </Helmet>
            
             <section className='w-full bg-gradient-to-r from-green-100 to-orange-100'>
                 <div className='max-w-7xl mx-auto px-4 py-10'>
