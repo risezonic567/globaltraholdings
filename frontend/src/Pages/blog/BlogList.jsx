@@ -47,7 +47,7 @@ export default function BlogList() {
         <>
 
         <Helmet>
-
+            <title>Home</title>
             <link rel="conanical" href="https://www.globaltravel-holdings.com/blog" />
         </Helmet>
            
