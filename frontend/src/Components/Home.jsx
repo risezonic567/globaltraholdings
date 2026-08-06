@@ -37,7 +37,7 @@ export default function Home() {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/20"></div>
-
+                    
 
                 <div className="relative z-10 min-h-screen px-4  flex flex-col justify-center">
 
@@ -47,9 +47,9 @@ export default function Home() {
                             Book Flights, Hotels & Holiday Packages Worldwide
                         </h1>
 
-                        <div className="w-full max-w-md lg:max-w-lg backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl">
+                        {/* <div className="w-full max-w-md lg:max-w-lg backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl">
                             <BookingForm />
-                        </div>
+                        </div> */}
 
                     </div>
                     <div>
