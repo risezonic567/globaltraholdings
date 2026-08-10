@@ -426,7 +426,7 @@ export default function FlightSearchBox() {
             <div className="text-xl font-black truncate">
               {travellers.adults + travellers.children} Pax
             </div>
-            <p className="text-xs text-gray-400 truncate">{travellers.cabin}</p>
+            <p className="text-sm text-gray-400 truncate">{travellers.cabin}</p>
 
             <AnimatePresence>
               {showTravellers && (
