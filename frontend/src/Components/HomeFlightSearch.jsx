@@ -480,7 +480,7 @@ export default function FlightSearchBox() {
   );
 }
 
-<style>{`
+{/* <style>{`
   .react-calendar {
     width: 100% !important;
     max-width: 100% !important;
@@ -502,4 +502,4 @@ export default function FlightSearchBox() {
       min-width: 40px;
     }
   }
-`}</style>
+`}</style> */}
