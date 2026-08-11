@@ -192,7 +192,18 @@ export default function FlightSearchBox() {
   }, [])
 
   return (
-    <div className="max-w-7xl mx-auto sm:mb-14 md:mt-20 p-6 md:pb-20  rounded-3xl shadow-2xl border border-none relative z-[999]">
+   <div className="
+  max-w-7xl mx-auto
+  mb-6 sm:mb-14
+  mt-6 md:mt-20
+  px-3 sm:px-6
+  pb-4 lg:pb-20
+  rounded-3xl
+  shadow-2xl
+  border border-none
+  relative z-[999]
+  overflow-visible
+">
 
       <div className="flex bg-gray-100 p-1 rounded-xl w-fit mb-6">
         {["oneway", "round"].map((type) => (
@@ -468,19 +479,34 @@ export default function FlightSearchBox() {
             </AnimatePresence>
           </div>
         </div>
-        <div className="absolute left-1/2 bottom-0 -translate-x-1/2  translate-y-1/2 ">
-          <button className="bg-green-600 hover:bg-green-600 text-white font-black px-16 py-5 rounded-full shadow-2xl shadow-green-400 transition-all transform active:scale-95 flex items-center gap-3 group border-4 border-white">
-            <Search size={26} className="group-hover:rotate-12 transition-transform" />
-            SEARCH FLIGHTS
-          </button>
-        </div>
+       <div className="mt-5 lg:absolute lg:left-1/2 lg:bottom-0 lg:-translate-x-1/2 lg:translate-y-1/2">
+  <button
+    type="submit"
+    className="
+      w-full lg:w-auto
+      bg-green-600 hover:bg-green-700
+      text-white font-black
+      px-8 lg:px-16
+      py-4 lg:py-5
+      rounded-2xl lg:rounded-full
+      shadow-2xl
+      transition-all
+      active:scale-95
+      flex items-center justify-center gap-3
+      border-4 border-white
+    "
+  >
+    <Search size={22} />
+    SEARCH FLIGHTS
+  </button>
+</div>
       </form>
 
     </div>
   );
 }
 
-{/* <style>{`
+ <style>{`
   .react-calendar {
     width: 100% !important;
     max-width: 100% !important;
@@ -502,4 +528,4 @@ export default function FlightSearchBox() {
       min-width: 40px;
     }
   }
-`}</style> */}
+`}</style> 
