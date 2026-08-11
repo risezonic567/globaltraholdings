@@ -379,7 +379,7 @@ export default function FlightSearchBox() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 z-[999] mt-2 bg-white shadow-2xl rounded-2xl border p-2 w-[min(70vw,200px)]"
+                  className="absolute top-full left-1/2 -translate-x-1/2 z-[999] mt-2 bg-white shadow-2xl rounded-2xl border p-2 w-[min(70vw,250px)]"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <Calendar
@@ -417,7 +417,7 @@ export default function FlightSearchBox() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 z-[100] mt-2 bg-white shadow-2xl rounded-2xl border p-2 w-[min(92vw,350px)]"
+                  className="absolute top-full left-1/2 -translate-x-1/2 z-[100] mt-2 bg-white shadow-2xl rounded-2xl border p-2 w-[min(70vw,250px)]"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <Calendar minDate={departure} value={returnDate} onChange={(val) => { setReturnDate(val); setShowRetCal(false); }} />
