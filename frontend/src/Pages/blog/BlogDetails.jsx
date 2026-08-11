@@ -43,7 +43,7 @@ export default function BlogDetails() {
         property="og:url"
         content={post.canonical}
       />
-      <meta property="og:type" content="article" />
+    
       <meta property="og:image" content={post.coverImage} />
 
       </Helmet>
