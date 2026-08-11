@@ -192,7 +192,7 @@ export default function FlightSearchBox() {
   }, [])
 
   return (
-   <div className="
+    <div className="
   max-w-7xl mx-auto
   mb-6 sm:mb-14
   mt-6 md:mt-20
@@ -379,7 +379,7 @@ export default function FlightSearchBox() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 z-[100] mt-2 bg-white shadow-2xl rounded-2xl border p-2 w-[min(92vw,350px)]"
+                  className="absolute top-full left-1/2 -translate-x-1/2 z-[999] mt-2 bg-white shadow-2xl rounded-2xl border p-2 w-[min(70vw,200px)]"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <Calendar
@@ -479,10 +479,10 @@ export default function FlightSearchBox() {
             </AnimatePresence>
           </div>
         </div>
-       <div className="mt-5 lg:absolute lg:left-1/2 lg:bottom-0 lg:-translate-x-1/2 lg:translate-y-1/2">
-  <button
-    type="submit"
-    className="
+        <div className="mt-5 lg:absolute lg:left-1/2 lg:bottom-0 lg:-translate-x-1/2 lg:translate-y-1/2">
+          <button
+            type="submit"
+            className="
       w-full lg:w-auto
       bg-green-600 hover:bg-green-700
       text-white font-black
@@ -495,18 +495,18 @@ export default function FlightSearchBox() {
       flex items-center justify-center gap-3
       border-4 border-white
     "
-  >
-    <Search size={22} />
-    SEARCH FLIGHTS
-  </button>
-</div>
+          >
+            <Search size={22} />
+            SEARCH FLIGHTS
+          </button>
+        </div>
       </form>
 
     </div>
   );
 }
 
- <style>{`
+<style>{`
   .react-calendar {
     width: 100% !important;
     max-width: 100% !important;

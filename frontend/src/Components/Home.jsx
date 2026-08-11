@@ -27,40 +27,42 @@ export default function Home() {
                 />
             </Helmet>
 
-            <section className="relative w-full min-h-screen overflow-hidden">
-                <video
-                    src="/video/Home Page Video.mp4"
-                    ref={videoRef}
-                    loop
-                    muted
-                    autoPlay
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
+           <section className="relative w-full min-h-screen overflow-visible">
 
-                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/20"></div>
+    {/* Background */}
+    <div className="absolute inset-0 overflow-hidden">
+        <video
+            src="/video/Home Page Video.mp4"
+            ref={videoRef}
+            loop
+            muted
+            autoPlay
+            className="absolute inset-0 w-full h-full object-cover"
+        />
 
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/20"></div>
+    </div>
 
-                <div className="relative z-10 px-4  flex flex-col justify-center">
-                    <h1 style={{ textShadow: "6px 6px 20px rgba(0,0,0,0.8)" }} className="text-white font-['Poppins'] font-bold text-xl sm:text-2xl md:text-4xl lg:text-4xl mt-20  text-center">
-                        Book Flights, Hotels & Holiday Packages Worldwide
-                    </h1>
-                    <div className="w-full  mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6">
+    {/* Content */}
+    <div className="relative z-10 px-4 flex flex-col justify-center">
 
+        <h1
+            style={{ textShadow: "6px 6px 20px rgba(0,0,0,0.8)" }}
+            className="text-white font-['Poppins'] font-bold text-xl sm:text-2xl md:text-4xl lg:text-4xl mt-20 text-center"
+        >
+            Book Flights, Hotels & Holiday Packages Worldwide
+        </h1>
 
+        <div className="w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 overflow-visible">
+            <FlightSearchBox />
+        </div>
 
+    </div>
+</section>
 
-                        <FlightSearchBox />
-
-
-                    </div>
-                    <div>
-                    </div>
-
-                </div>
-            </section>
 
             <section
-                className="w-full max-w-full overflow-hidden"
+                className="w-full max-w-full overflow-visible"
                 data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1500"
