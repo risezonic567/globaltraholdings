@@ -615,7 +615,7 @@ export let blogPosts = [
       <div className="space-y-4 text-gray-700 leading-relaxed">
 
         <p>
-          Although convenience has increased for both domestic and international travel, flying is often budget-busting. The upside is most people use the same standard methods to learn <b>how to get cheapest airline tickets online.</b> New ways to travel, new tools, new apps and new booking sites will make tickets easy and cheap to buy in 2026.
+          Although convenience has increased  both domestic and international travel, flying is often budget-busting. The upside is most people use the same standard methods to learn <b>how to get cheapest airline tickets online.</b> New ways to travel, new tools, new apps and new booking sites will make tickets easy and cheap to buy in 2026.
         </p>
         <p>
 
@@ -875,5 +875,5 @@ export let blogPosts = [
       </div>
     )
   },
-  
+
 ];
