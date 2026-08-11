@@ -5,7 +5,6 @@ export default function Disclaimer() {
     <section className="bg-gradient-to-b from-green-50 via-white to-green-50 min-h-screen py-10 sm:py-14">
       <div className="max-w-5xl mx-auto px-4">
         
-        {/* Header */}
         <div className="relative overflow-hidden rounded-3xl border border-green-200 bg-white shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-gray-500/10"></div>
 
@@ -17,12 +16,23 @@ export default function Disclaimer() {
             <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
             DISCLAIMER : Global Travel Holdings LLC 
             </h1>
+             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
+          Global Booking Travel is an independent travel agency based in the United States. We provide booking and customer support services for flights, hotels, and travel packages in partnership with various airlines and travel agencies worldwide.
+          </p>
+
+             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
+          We are not the official website of any airline. All airline names, logos, and trademarks mentioned on this site are the property of their respective owners and are used solely for informational purposes.
+            </p>
+
+             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
+              Bookings made through our platform may be fulfilled by third‑party providers, including airlines and partner agencies located both within the United States and outside India. While we strive to ensure accuracy and reliability, we do not guarantee the availability of specific fares, schedules, or services offered by these third parties.
+            </p>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
-           The information provided on the Global Travel Holdings LLC website is intended for general informational and booking purposes only. While we strive to ensure that all content, pricing, and travel details are accurate and up to date, we do not guarantee the completeness, reliability, or accuracy of all information at all times
+         Customers are advised to review all booking details carefully and to contact the airline directly for official policies regarding cancellations, refunds, baggage, and other travel‑related services.
             </p>
             <p className="mt-4 text-gray-600 text-sm sm:text-base leading-7">
-              Travel-related information such as prices, availability, schedules, and policies may change without prior notice due to factors beyond our control. By using our website, you acknowledge and accept that Global Travel Holdings LLC is not liable for any discrepancies, interruptions, or losses resulting from such changes.
+           By using our website, you acknowledge and agree that Global Booking Travel  acts as an intermediary between travellers and airlines/partners, and we are not liable for changes, delays, or cancellations made by third‑party providers.
             </p>
 
             <div className="mt-5 flex gap-3 flex-wrap text-sm">
@@ -32,10 +42,8 @@ export default function Disclaimer() {
           </div>
         </div>
 
-        {/* Content */}
         <div className="mt-8 grid lg:grid-cols-3 gap-6">
           
-          {/* Left */}
           <div className="lg:col-span-2 space-y-6">
 
             <div className="bg-white border rounded-2xl p-6 shadow-sm">

@@ -77,6 +77,13 @@ export default function Footer() {
             is a trusted and modern travel platform designed to make your journey smooth, luxurious, and unforgettable with premium cruise, hotel, and vacation experiences.
           </p>
 
+           <p className="text-gray-300 text-[15px] leading-relaxed border-l-2 border-emerald-500/60 pl-4">
+            <span className="font-semibold text-white">
+              Disclaimer:
+            </span>{" "}
+            Global Travel Booking is an independent travel agency. We partner with airlines and booking agencies worldwide. For full details, please see our Disclaimer.
+          </p>
+
           {/* Social Icons */}
 
           <div className="flex gap-4 pt-2">
@@ -97,8 +104,13 @@ export default function Footer() {
             )}
 
           </div>
+           
+
+          
 
         </motion.div>
+
+        
 
         {/* Quick Links */}
 
@@ -290,6 +302,7 @@ export default function Footer() {
       <div className="border-t border-white/10 bg-black/40 backdrop-blur-xl relative z-10">
 
         <div className="max-w-7xl mx-auto py-5 px-20 flex flex-col md:flex-row justify-between items-center gap-4  tracking-wider text-gray-200">
+              
 
           <div className="flex items-center gap-2">
 
