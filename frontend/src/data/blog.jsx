@@ -300,6 +300,7 @@ export let blogPosts = [
       </div>
     )
   },
+
   {
     id: 2,
     slug: "global-travel-holdings-guide-to-cheap-international-flights-book-at-the-right-time",
@@ -573,6 +574,7 @@ export let blogPosts = [
       </div>
     )
   },
+
   {
     id: 3,
     slug: "how-to-get-the-cheapest-airfare-online-in-2026-step-by-step-guide",
@@ -873,4 +875,5 @@ export let blogPosts = [
       </div>
     )
   },
+  
 ];
