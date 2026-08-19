@@ -9,9 +9,9 @@ export default function Navbar() {
   let [currentLang, setCurrentLang] = useState("EN");
   let langRef = useRef(null);
 
-  let [openDropdown,setOpenDropdown]= useState(null)
+  let [openDropdown, setOpenDropdown] = useState(null)
 
-   const languages = [
+  const languages = [
     { name: "English", code: "en", label: "EN" },
     { name: "Hindi", code: "hi", label: "HI" },
     { name: "Spanish", code: "es", label: "ES" },
@@ -27,12 +27,6 @@ export default function Navbar() {
     { title: "Home", path: "/" },
     { title: "Flights", path: "/flights" },
     { title: "Hotels", path: "/hotels" },
-    { title: "Agency Support",
-      subtitle:[
-        {subtitle:"Travelocity",path:'/agency-support/travelocity-blog'},
-        {subtitle:"Booking",path:'/agency-support/booking-blog'},
-      ]
-     },
     { title: "Cars", path: "/cars" },
     { title: "Cruise", path: "/cruise" },
     { title: "Packages", path: "/packages" },
@@ -100,248 +94,239 @@ export default function Navbar() {
       <div id="google_translate_element" style={{ display: "none" }} />
 
 
-<div className={`fixed inset-0 z-[9999] transition-all duration-500 ${open ? "visible" : "invisible"}`}>
-  
-  <div
-    className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-500 ${
-      open ? "opacity-100" : "opacity-0"
-    }`}
-    onClick={() => setOpen(false)}
-  />
+      <div className={`fixed inset-0 z-[9999] transition-all duration-500 ${open ? "visible" : "invisible"}`}>
 
-  <div
-    className={`absolute left-0 top-0 h-full w-[280px] sm:w-[350px] bg-white text-[#111111] shadow-2xl transform transition-transform duration-500 ease-out ${
-      open ? "translate-x-0" : "-translate-x-full"
-    } flex flex-col`}
-  >
-    <div className="flex justify-between items-center p-6 border-b border-gray-100">
-      <h2 className="text-xl font-black tracking-tight text-[#111111] uppercase">Menu</h2>
-      <div 
-        className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
-        onClick={() => setOpen(false)}
-      >
-        <X size={22} className="text-gray-500 hover:text-[#111111] hover:rotate-90 transition-all duration-300" />
-      </div>
-    </div>
-
-    <nav className="flex flex-col gap-1.5 p-5">
-     {navbar.map((item, i) => (
-  <div key={i} className="w-full">
-
-    {item.subtitle ? (
-      <>
-        {/* Parent */}
-        <button
-          onClick={() =>
-            setOpenDropdown(
-              openDropdown === item.title ? null : item.title
-            )
-          }
-          className="w-full flex items-center justify-between text-base font-bold py-3 px-4 rounded-xl transition-all duration-200 uppercase tracking-wide text-gray-700 hover:bg-gray-50 hover:text-[#111111]"
-        >
-          <span>{item.title}</span>
-
-          <ChevronDown
-            size={18}
-            className={`transition-transform duration-300 ${
-              openDropdown === item.title ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-
-        {/* Mobile Submenu */}
         <div
-          className={`overflow-hidden transition-all duration-300 ${
-            openDropdown === item.title
-              ? "max-h-40 opacity-100"
-              : "max-h-0 opacity-0"
-          }`}
+          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-500 ${open ? "opacity-100" : "opacity-0"
+            }`}
+          onClick={() => setOpen(false)}
+        />
+
+        <div
+          className={`absolute left-0 top-0 h-full w-[280px] sm:w-[350px] bg-white text-[#111111] shadow-2xl transform transition-transform duration-500 ease-out ${open ? "translate-x-0" : "-translate-x-full"
+            } flex flex-col`}
         >
-          <div className="ml-4 mt-1 mb-2 pl-3 border-l-2 border-emerald-100">
-            {item.subtitle.map((sub, index) => (
-              <NavLink
-                key={index}
-                to={sub.path}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) => `
+          <div className="flex justify-between items-center p-6 border-b border-gray-100">
+            <h2 className="text-xl font-black tracking-tight text-[#111111] uppercase">Menu</h2>
+            <div
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
+              onClick={() => setOpen(false)}
+            >
+              <X size={22} className="text-gray-500 hover:text-[#111111] hover:rotate-90 transition-all duration-300" />
+            </div>
+          </div>
+
+          <nav className="flex flex-col gap-1.5 p-5">
+            {navbar.map((item, i) => (
+              <div key={i} className="w-full">
+
+                {item.subtitle ? (
+                  <>
+                    {/* Parent */}
+                    <button
+                      onClick={() =>
+                        setOpenDropdown(
+                          openDropdown === item.title ? null : item.title
+                        )
+                      }
+                      className="w-full flex items-center justify-between text-base font-bold py-3 px-4 rounded-xl transition-all duration-200 uppercase tracking-wide text-gray-700 hover:bg-gray-50 hover:text-[#111111]"
+                    >
+                      <span>{item.title}</span>
+
+                      <ChevronDown
+                        size={18}
+                        className={`transition-transform duration-300 ${openDropdown === item.title ? "rotate-180" : ""
+                          }`}
+                      />
+                    </button>
+
+                    {/* Mobile Submenu */}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ${openDropdown === item.title
+                          ? "max-h-40 opacity-100"
+                          : "max-h-0 opacity-0"
+                        }`}
+                    >
+                      <div className="ml-4 mt-1 mb-2 pl-3 border-l-2 border-emerald-100">
+                        {item.subtitle.map((sub, index) => (
+                          <NavLink
+                            key={index}
+                            to={sub.path}
+                            onClick={() => setOpen(false)}
+                            className={({ isActive }) => `
                   block py-2.5 px-4 rounded-lg text-sm font-semibold
                   transition-all duration-200
-                  ${
-                    isActive
-                      ? "bg-emerald-50 text-emerald-600"
-                      : "text-gray-500 hover:bg-emerald-50 hover:text-emerald-600"
-                  }
+                  ${isActive
+                                ? "bg-emerald-50 text-emerald-600"
+                                : "text-gray-500 hover:bg-emerald-50 hover:text-emerald-600"
+                              }
                 `}
-              >
-                {sub.subtitle}
-              </NavLink>
-            ))}
-          </div>
-        </div>
-      </>
-    ) : (
-      <NavLink
-        to={item.path}
-        onClick={() => setOpen(false)}
-        className={({ isActive }) => `
+                          >
+                            {sub.subtitle}
+                          </NavLink>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <NavLink
+                    to={item.path}
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) => `
           block text-base font-bold py-3 px-4 rounded-xl
           transition-all duration-200 uppercase tracking-wide
-          ${
-            isActive
-              ? "bg-emerald-50 text-emerald-600"
-              : "hover:bg-gray-50 hover:pl-6 text-gray-700 hover:text-[#111111]"
-          }
+          ${isActive
+                        ? "bg-emerald-50 text-emerald-600"
+                        : "hover:bg-gray-50 hover:pl-6 text-gray-700 hover:text-[#111111]"
+                      }
         `}
-      >
-        {item.title}
-      </NavLink>
-    )}
+                  >
+                    {item.title}
+                  </NavLink>
+                )}
 
-  </div>
-))}
-    </nav>
-
-    <div className="mt-auto p-6 border-t border-gray-100 bg-gray-50/50">
-        <p className="text-[10px] text-gray-400 uppercase tracking-widest font-black">Global Logo © 2026</p>
-    </div>
-  </div>
-</div>
-
-<section className="w-full h-[95px] flex items-center justify-between px-6 md:px-12 bg-white/90 backdrop-blur-md text-[#111111] sticky top-0 z-[999] border-b border-gray-100 shadow-sm">
-
-  <div className="flex items-center gap-5">
-    <Menu
-      size={26}
-      className="cursor-pointer md:hidden text-[#111111] hover:text-emerald-500 transition-colors"
-      onClick={() => setOpen(true)}
-    />
-    <div className="flex items-center">
-      <Link to="/">
-        <img 
-          src="/images/logo/gtb logo 2 (1).png" 
-          alt="Logo"  
-          className="h-24 w-auto object-contain md:pl-[120px] transition-transform p-2 duration-300"
-        />
-      </Link>
-    </div>
-  </div>
-
-  <div className="flex items-center gap-10 tracking-[1.5px]">
-
-    <nav className="hidden md:flex gap-10 items-center tracking-[1.5px]">
-     {navbar.map((item, i) => (
- <div
-  key={i}
-  className="relative group"
-  onMouseEnter={() => setOpenDropdown(item.title)}
-  onMouseLeave={() => setOpenDropdown(null)}
->
-  {item.subtitle ? (
-    <>
-      {/* Parent */}
-      <button
-        className="flex items-center gap-1 text-[14px] font-['Poppins'] font-bold tracking-wider uppercase text-[#111111] hover:text-emerald-600 transition-colors duration-200"
-      >
-        {item.title}
-
-        <ChevronDown
-          size={15}
-          className="transition-transform duration-300 group-hover:rotate-180"
-        />
-      </button>
-
-      {/* Dropdown */}
-      <div
-        className={`
-          absolute top-full left-1/2 -translate-x-1/2 pt-4
-          transition-all duration-200
-          ${
-            openDropdown === item.title
-              ? "opacity-100 visible translate-y-0"
-              : "opacity-0 invisible -translate-y-2 pointer-events-none"
-          }
-        `}
-      >
-        <div className="w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
-
-          {item.subtitle.map((sub, index) => (
-            <NavLink
-              key={index}
-              to={sub.path}
-              onClick={() => setOpenDropdown(null)}
-              className={({ isActive }) => `
-                block px-5 py-3.5 text-sm font-semibold
-                transition-all duration-200
-                ${
-                  isActive
-                    ? "bg-emerald-50 text-emerald-600"
-                    : "text-gray-700 hover:bg-emerald-50 hover:text-emerald-600"
-                }
-              `}
-            >
-              {sub.subtitle}
-            </NavLink>
-          ))}
-
-        </div>
-      </div>
-    </>
-  ) : (
-    <NavLink
-      to={item.path}
-      className={({ isActive }) => `
-        text-[14px] font-['Poppins'] font-bold tracking-wider
-        uppercase transition-colors duration-200
-        ${
-          isActive
-            ? "text-emerald-600"
-            : "text-[#111111] hover:text-emerald-600"
-        }
-      `}
-    >
-      {item.title}
-    </NavLink>
-  )}
-</div>
-))}
-    </nav>
-
-    <div className="flex items-center gap-4">
-      
-      <div className="relative" ref={langRef}>
-        <button
-          onClick={() => setIsLangOpen(!isLangOpen)}
-          className="flex items-center gap-2 px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-full border border-gray-200 text-xs font-black text-gray-700 uppercase tracking-wider transition-all duration-200"
-        >
-          <span className="text-emerald-500 text-sm animate-pulse">•</span> {currentLang}
-          <ChevronDown size={14} className={`text-gray-500 transition-transform duration-300 ${isLangOpen ? "rotate-180" : ""}`} />
-        </button>
-
-        {isLangOpen && (
-          <div className="absolute right-0 mt-3 w-48 bg-white text-[#111111] rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-in fade-in zoom-in duration-200 z-[1000]">
-            {languages.map((lang) => (
-              <div
-                key={lang.code}
-                onClick={() => handleLangChange(lang.code, lang.label)}
-                className="px-4 py-3.5 hover:bg-emerald-50 hover:text-emerald-600 cursor-pointer text-xs font-bold uppercase tracking-wide transition-colors border-b last:border-0 border-gray-50"
-              >
-                {lang.name}
               </div>
             ))}
+          </nav>
+
+          <div className="mt-auto p-6 border-t border-gray-100 bg-gray-50/50">
+            <p className="text-[10px] text-gray-400 uppercase tracking-widest font-black">Global Logo © 2026</p>
           </div>
-        )}
+        </div>
       </div>
 
-      <NavLink
-        to="/profile"
-        className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 hover:bg-emerald-600 hover:scale-105 active:scale-95 transition-all duration-200"
-      >
-        <User size={18} strokeWidth={2.5} />
-      </NavLink>
-    </div>
-  </div>
-</section>
-</>
-    
+      <section className="w-full h-[95px] flex items-center justify-between px-6 md:px-12 bg-white/90 backdrop-blur-md text-[#111111] sticky top-0 z-[999] border-b border-gray-100 shadow-sm">
+
+        <div className="flex items-center gap-5">
+          <Menu
+            size={26}
+            className="cursor-pointer md:hidden text-[#111111] hover:text-emerald-500 transition-colors"
+            onClick={() => setOpen(true)}
+          />
+          <div className="flex items-center">
+            <Link to="/">
+              <img
+                src="/images/logo/gtb logo 2 (1).png"
+                alt="Logo"
+                className="h-24 w-auto object-contain md:pl-[120px] transition-transform p-2 duration-300"
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-10 tracking-[1.5px]">
+
+          <nav className="hidden md:flex gap-10 items-center tracking-[1.5px]">
+            {navbar.map((item, i) => (
+              <div
+                key={i}
+                className="relative group"
+                onMouseEnter={() => setOpenDropdown(item.title)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                {item.subtitle ? (
+                  <>
+                    {/* Parent */}
+                    <button
+                      className="flex items-center gap-1 text-[14px] font-['Poppins'] font-bold tracking-wider uppercase text-[#111111] hover:text-emerald-600 transition-colors duration-200"
+                    >
+                      {item.title}
+
+                      <ChevronDown
+                        size={15}
+                        className="transition-transform duration-300 group-hover:rotate-180"
+                      />
+                    </button>
+
+                  
+                    <div
+                      className={`
+          absolute top-full left-1/2 -translate-x-1/2 pt-4
+          transition-all duration-200
+          ${openDropdown === item.title
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                        }
+        `}
+                    >
+                      <div className="w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+
+                        {item.subtitle.map((sub, index) => (
+                          <NavLink
+                            key={index}
+                            to={sub.path}
+                            onClick={() => setOpenDropdown(null)}
+                            className={({ isActive }) => `
+                block px-5 py-3.5 text-sm font-semibold
+                transition-all duration-200
+                ${isActive
+                                ? "bg-emerald-50 text-emerald-600"
+                                : "text-gray-700 hover:bg-emerald-50 hover:text-emerald-600"
+                              }
+              `}
+                          >
+                            {sub.subtitle}
+                          </NavLink>
+                        ))}
+
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) => `
+        text-[14px] font-['Poppins'] font-bold tracking-wider
+        uppercase transition-colors duration-200
+        ${isActive
+                        ? "text-emerald-600"
+                        : "text-[#111111] hover:text-emerald-600"
+                      }
+      `}
+                  >
+                    {item.title}
+                  </NavLink>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4">
+
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-2 px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-full border border-gray-200 text-xs font-black text-gray-700 uppercase tracking-wider transition-all duration-200"
+              >
+                <span className="text-emerald-500 text-sm animate-pulse">•</span> {currentLang}
+                <ChevronDown size={14} className={`text-gray-500 transition-transform duration-300 ${isLangOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {isLangOpen && (
+                <div className="absolute right-0 mt-3 w-48 bg-white text-[#111111] rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-in fade-in zoom-in duration-200 z-[1000]">
+                  {languages.map((lang) => (
+                    <div
+                      key={lang.code}
+                      onClick={() => handleLangChange(lang.code, lang.label)}
+                      className="px-4 py-3.5 hover:bg-emerald-50 hover:text-emerald-600 cursor-pointer text-xs font-bold uppercase tracking-wide transition-colors border-b last:border-0 border-gray-50"
+                    >
+                      {lang.name}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <NavLink
+              to="/profile"
+              className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 hover:bg-emerald-600 hover:scale-105 active:scale-95 transition-all duration-200"
+            >
+              <User size={18} strokeWidth={2.5} />
+            </NavLink>
+          </div>
+        </div>
+      </section>
+    </>
+
   );
 }

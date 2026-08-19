@@ -93,11 +93,11 @@ export default function App() {
             <Route path='/blog' element={<BlogList />} />
             <Route path='/blog/:slug' element={<BlogDetail />} />
 
-            <Route path='/agency-support/travelocity-blog' element = {<TravelocityBlogList/>}/>
+            {/* <Route path='/agency-support/travelocity-blog' element = {<TravelocityBlogList/>}/>
             <Route path='/agency-support/travelocity-blog/:slug' element = {<TravelocityBlogDetails/>}/>
 
             <Route path='/agency-support/booking-blog' element = {<BookingBlogList/>}/>
-            <Route path='/agency-support/booking-blog/:slug' element = {<BookingBlogDetails/>}/>
+            <Route path='/agency-support/booking-blog/:slug' element = {<BookingBlogDetails/>}/> */}
 
 
 

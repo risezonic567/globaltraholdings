@@ -160,7 +160,7 @@ export default function Flights() {
                            Book Cheap Flights & Airline Tickets Online
                         </h1>
 
-                        <p className="mt-4 text-gray-100 text-lg max-w-2xl  drop-shadow-md">
+                        <p className="mt-4 text-gray-100 text-lg max-w-6xl  drop-shadow-md">
                             Finding the right flight at a competitive price can make travel planning easier. Global Travel Holdings helps travelers explore cheap flights, airline tickets, flight deals, and airfare options for domestic and international travel.<br/>    Whether you are planning a business trip, family vacation, weekend getaway, or international journey, you can explore available flights based on your destination, travel dates, preferred itinerary, and budget. Compare available routes, airlines, schedules, and fares to find a flight option that fits your travel plans.
                         </p>
 

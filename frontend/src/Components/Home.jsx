@@ -27,42 +27,40 @@ export default function Home() {
                 />
             </Helmet>
 
-           <section className="relative w-full min-h-screen overflow-visible">
+            <section className="relative w-full min-h-screen overflow-visible">
 
-    {/* Background */}
-    <div className="absolute inset-0 overflow-hidden">
-        <video
-            src="/video/Home Page Video.mp4"
-            ref={videoRef}
-            loop
-            muted
-            autoPlay
-            className="absolute inset-0 w-full h-full object-cover"
-        />
+                <div className="absolute inset-0 overflow-hidden">
+                    <video
+                        src="/video/Home Page Video.mp4"
+                        ref={videoRef}
+                        loop
+                        muted
+                        autoPlay
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/20"></div>
-    </div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/20"></div>
+                </div>
 
-    {/* Content */}
-    <div className="relative z-10 px-4 flex flex-col justify-center">
+                <div className="relative z-10 px-4 flex flex-col justify-center">
 
-        <h1
-            style={{ textShadow: "6px 6px 20px rgba(0,0,0,0.8)" }}
-            className="text-white font-['Poppins']  text-xl sm:text-2xl md:text-4xl lg:text-4xl mt-20 text-center"
-        >
-             Travel Booking for Flights, Hotels, Car Rentals and Vacation Packages
-        </h1>
-        <p style={{ textShadow: "6px 6px 20px rgba(0,0,0,0.8)" }}
-            className="text-white font-['Poppins'] mx-auto w-4xl text-md mt-4 text-center"> 
-            Planning a trip is about finding the right flights, stays, and travel services in one place. At Global Travel Holdings we help travelers find flights, hotels, car rentals, cruises, and vacation packages across global destinations. Whether you are planning a business trip, a beach vacation, a family holiday, or an international adventure, you can compare flights, accommodations, and travel services that match your schedule and budget. accommodations, and travel services that match your schedule and budget. 
-        </p>
+                    <h1
+                        style={{ textShadow: "6px 6px 20px rgba(0,0,0,0.8)" }}
+                        className="text-white font-['Poppins']  text-xl sm:text-2xl md:text-4xl lg:text-4xl mt-20 text-center"
+                    >
+                        Travel Booking for Flights, Hotels, Car Rentals and Vacation Packages
+                    </h1>
+                    <p style={{ textShadow: "6px 6px 20px rgba(0,0,0,0.8)" }}
+                        className="text-white font-['Poppins'] mx-auto w-4xl text-md mt-4 text-center">
+                        Planning a trip is about finding the right flights, stays, and travel services in one place. At Global Travel Holdings we help travelers find flights, hotels, car rentals, cruises, and vacation packages across global destinations. Whether you are planning a business trip, a beach vacation, a family holiday, or an international adventure, you can compare flights, accommodations, and travel services that match your schedule and budget. accommodations, and travel services that match your schedule and budget.
+                    </p>
 
-        <div className="w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 overflow-visible">
-            <FlightSearchBox />
-        </div>
+                    <div className="w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 overflow-visible">
+                        <FlightSearchBox />
+                    </div>
 
-    </div>
-</section>
+                </div>
+            </section>
 
 
             <section
@@ -127,7 +125,7 @@ export default function Home() {
                         </h2>
 
                         <p className="text-slate-500 mt-4 max-w-2xl text-sm sm:text-base">
-                           Finding affordable airfare is an important part of planning any journey. Travelers can search flights to different destinations  while comparing fares from leading airlines to find options that match their schedule and budget.<br/>Flexible travel dates and seasonal promotions make it easier to save on your journey while enjoying a travel experience.Whether you are traveling domestically or internationally, compare airline fares, schedules, and routes to find the option that best fits your journey. 
+                            Finding affordable airfare is an important part of planning any journey. Travelers can search flights to different destinations  while comparing fares from leading airlines to find options that match their schedule and budget.<br />Flexible travel dates and seasonal promotions make it easier to save on your journey while enjoying a travel experience.Whether you are traveling domestically or internationally, compare airline fares, schedules, and routes to find the option that best fits your journey.
                         </p>
                     </div>
 
