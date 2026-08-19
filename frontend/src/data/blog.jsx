@@ -13,7 +13,7 @@ export let blogPosts = [
       "https://www.globaltravel-holdings.com/blog/global-travel-trends-best-time-to-book-cheap-flights-and-hotels",
 
     title: "Global Travel Trends 2026: Best Time to Book Cheap Flights and Hotels",
-    category: "Cheap Flights",
+    category: "cheap-flights",
     date: "2026-05-21",
     author: "Global Travel Team",
     authorAvatar:
@@ -312,7 +312,7 @@ export let blogPosts = [
       "https://www.globaltravel-holdings.com/blog/global-travel-holdings-guide-to-cheap-international-flights-book-at-the-right-time",
 
     title: "Global Travel Holdings Guide to Cheap International Flights 2026: Book at the Right Time",
-    category: "Cheap Flights",
+    category: "cheap-flights",
     date: "2026-05-22",
     author: "Global Travel Team",
     authorAvatar:
@@ -586,7 +586,7 @@ export let blogPosts = [
       "https://www.globaltravel-holdings.com/blog/how-to-get-the-cheapest-airfare-online-in-2026-step-by-step-guide",
 
     title: "How to Get the Cheapest Airfare Online in 2026 (Step-by-Step Guide)",
-    category: "Cheap Flights",
+    category: "cheap-flights",
     date: "2026-05-25",
     author: "Global Travel Team",
     authorAvatar:
@@ -876,142 +876,6 @@ export let blogPosts = [
     )
   },
 
-  {
-    id: 4,
-    slug: "travelocity-phone-number-Official-customer-service-support-contacts",
-    metatitle:
-      "Travelocity Phone Number: Official Customer Service & Support",
-    metadescription:
-      "Find the Travelocity phone number for customer service  refunds, cancellations, booking changes, to and other travel assistance in the USA",
-    canonical:
-      "https://www.globaltravel-holdings.com/blog/travelocity-phone-number-Official-customer-service-support-contacts",
-
-    title: "Travelocity Phone Number: Official Customer Service & Support Contacts",
-    category: "Cheap Flights",
-    date: "2026-08-11",
-    author: "Global Travel Team",
-    authorAvatar:
-      "https://www.globaltravel-holdings.com/assets/Travel%20o%20sun%20logo%20png-0728f093.png",
-
-    readingTime: "15 min read",
-    views: 1000,
-    likes: 170,
-    popularScore: 2,
-
-    image: "/images/blogimage/Travelocity Phone Number Official Customer Service & Support Contacts.jpg.jpeg",
-    coverImage:
-      "/images/blogimage/Travelocity Phone Number Official Customer Service & Support Contacts.jpg.jpeg",
-
-    tags: [
-      "Cheap International Flight",
-      "Domestic Travel",
-      "International Travel",
-    ],
-
-    excerpt:
-      "Ifyouneed immediateassistancewith a booking, cancellation, refund, or flight change,",
-    relatedPosts: [1, 3],
-
-    content: (
-      <div className="space-y-4 text-gray-700 leading-relaxed">
-        <h3 className="text-xl font-semibold mt-5 mb-5">Travelocity Phone Number</h3>
-        <p>
-          Ifyouneed immediateassistancewith a booking, cancellation, refund, or flight change,<br /><br />
-          contact Travelocity customer service  +18888434146 (USA) using the appropriate support line for your region.<br /><br />
-          Site : <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">https://www.globaltravel-holdings.com/</Link> <br /><br />
-          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
-          Travelocity also provides online support through its Help Center, where travelers can<br /><br />
-          manage bookings,request refunds,and review cancellation policies.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-5 mt-5">How Travelocity Customer Service Can Help</h2>
-        <p>
-          TheTravelocity customer care team assists travelers with:<br /><br />
-          Flight reservations and new bookings<br /><br />
-          • Flight changes and schedule modifications<br /><br />
-          Hotel booking issues Vacation package support Refund requests<br /><br />
-          Trip cancellations<br /><br />
-          Travel credits and vouchers Baggage-related concerns<br /><br />
-          For faster service, keep your itinerary number, booking email, and travel dates available<br /><br />
-          before contacting Travelocity customer service.<br /><br />
-
-          Canceling flights<br /><br />
-          Canceling hotel reservations Checking refund status Reviewing airline policies<br /><br />
-          Travelers can often resolve common issues online without waiting for a phone representative.<br /><br />
-          Site : <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">https://www.globaltravel-holdings.com/</Link> <br /><br />
-          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
-        </p>
-
-        <h2 className="text-2xl font-semibold mt-5 mb-5">Frequently Asked Questions</h2>
-        <h4 className="text-xl font-semibold mt-5 mb-5">WhatistheTravelocityphonenumber for refunds?</h4>
-        <p>
-          For refund-related questions, call Travelocity customer service in your region:<br />
-          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
-          Refund eligibility depends on the airline, hotel, or travel provider’s policies and the fare
-          rules attached to your reservation.<br />
-          Site : <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">https://www.globaltravel-holdings.com/</Link> <br /><br />
-          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
-        </p>
-        <h2 className="text-2xl font-semibold mt-5 mb-5">Can I cancel a Travelocity booking by phone?</h2>
-        <p>
-          Yes. Travelocity customercarerepresentativescanhelp cancel eligible flights, hotels, vacation packages, and other travel services. Cancellation fees may apply depending on<br />
-          the supplier and fare conditions.
-
-        </p>
-
-        <h2 className="text-2xl font-semibold mt-5 mb-5">How do I change a flight booked through Travelocity?</h2>
-        <p>
-          Contact Travelocitycustomerserviceormanage thebooking through the Travelocity Help<br />
-          Centre. Flight change fees,fare differences,and airlinerules may affect available options.
-
-        </p>
-        <h2 className="text-2xl font-semibold mt-5 mb-5">Can Travelocity help with new flight or hotel bookings?</h2>
-        <p>
-          Yes.Travelocity customercarecanassistwith:<br />
-          New flight reservations Hotel bookings Vacation packages<br />
-          Car rentals<br />
-          Travel activities<br />
-          Calling customer service may be useful when booking complex itineraries or multi-city
-          trips.
-
-        </p>
-        <h2 className="text-2xl font-semibold mt-5 mb-5">Who should I contact for baggage issues?</h2>
-        <p>
-          For lost, delayed, or damaged baggage, the airline is usually the primary point of contact because baggage handling is managed directly by the carrier. Travelocity customer service<br />
-          can help locate airline contact <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link> (USA) information and review your itinerary details.
-
-        </p>
-        <h2 className="text-2xl font-semibold mt-5 mb-5">How long do Travelocity refunds take?</h2>
-        <p>
-          Refundprocessingtimesvary byairline, hotel, and payment method. Travelocity recommends checking refund timelines and policies through its Help Centre.
-
-        </p>
-        <h2 className="text-xl font-semibold mt-5 mb-5">Travelocity Customer Care Tips</h2>
-        <p>
-          Together faster:<br />
-          1. Have your itinerary number ready.<br />
-          2. Call during non-peak hours when possible.<br />
-          3. Check the Travelocity Help Centre before calling.<br />
-          4. Keep any airline or hotel confirmation numbers available.<br />
-          5. Save chat transcripts or email confirmations for reference.<br />
-          Site : <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">https://www.globaltravel-holdings.com/</Link> <br /><br />
-          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
-        </p>
-        <h2 className="text-2xl font-semibold mt-5 mb-5">Contact Travelocity Customer Service Today</h2>
-        <p>
-          Whether you need a refund,cancellation,flight change, new booking, or assistance with travel disruptions, <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">Travelocity customer service</Link> <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link> and the Travelocity Help Centre provide multiple ways to resolve issues quickly.
-
-        </p>
-        <p>
-          Travelocity Phone Numbers<br />
-          Site : <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">https://www.globaltravel-holdings.com/</Link> <br /><br />
-          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
-
-
-        </p>
-      </div>
-    )
-  },
 
   {
     id: 5,
@@ -1024,7 +888,7 @@ export let blogPosts = [
       "https://www.globaltravel-holdings.com/blog/travelocity-customer-care-how-to-contact-travelocity-customer-service",
 
     title: "Travelocity Customer Care: How to Contact Travelocity Customer Service",
-    category: "Cheap Flights",
+    category: "travelocity",
     date: "2026-08-11",
     author: "Global Travel Team",
     authorAvatar:
@@ -1121,6 +985,290 @@ Site :<Link to="https://www.globaltravel-holdings.com/" className="text-blue-600
 If you need immediate assistance,  +18888434146(USA) sign in to your Travelocity account before contacting support. This allows Travelocity customer care agents to access your itinerary faster and provide more accurate assistance.
 USA: 18888434146
 
+      </p>
+      </div>
+    )
+  },
+
+    {
+    id: 6,
+    slug: "booking-com-cancellation-policy-everything-you-need-to-know-about-cancellations-refunds-and-changes",
+    metatitle:
+      "",
+    metadescription:
+      "",
+    canonical:
+      "https://www.globaltravel-holdings.com/blog/booking-com-cancellation-policy-everything-you-need-to-know-about-cancellations-refunds-and-changes",
+
+    title: "Booking.com Cancellation Policy: Everything You Need to Know About Cancellations, Refunds, and Changes",
+    category: "booking",
+    date: "2026-08-12",
+    author: "Global Travel Team",
+    authorAvatar:
+      "https://www.globaltravel-holdings.com/assets/Travel%20o%20sun%20logo%20png-0728f093.png",
+
+    readingTime: "15 min read",
+    views: 1000,
+    likes: 170,
+    popularScore: 2,
+
+    image: "",
+    coverImage:
+      "",
+
+    tags: [
+      "Cheap International Flight",
+      "Domestic Travel",
+      "International Travel",
+    ],
+
+    excerpt:
+      "",
+    relatedPosts: [1, 3],
+
+    content: (
+      <div className="space-y-6 text-gray-700 leading-relaxed">
+        <p>
+          Site : <Link to="https://www.globaltravel-holdings.com/" className="text-blue-600 underline">https://www.globaltravel-holdings.com/</Link> <br /><br />
+          USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
+        </p>
+
+        <h2 className="text-2xl font-semibold">What Is the Booking.com Cancellation Policy?</h2>
+        <p>
+          The Booking.com cancellation policy  (<Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link> (USA)) depends on the property, room type, and rate you selected when making your reservation. Some bookings offer free cancellation until a specified date, while others are non-refundable and may charge the full booking amount if cancelled.
+        </p>
+
+        <h3 className="text-xl font-semibold">To check your cancellation terms:</h3>
+        <p>
+          1. Open your Booking.com reservation confirmation.<br/><br/>
+2. Review the cancellation section.<br/><br/>
+3. Sign in to your Booking.com account and visit "Bookings".<br/><br/>
+4. Select your reservation to view cancellation and refund details.<br/><br/>
+
+In most cases, the property’s individual policy determines whether you receive a full refund, partial refund, or no refund.
+
+        </p>
+
+        <h2 className="text-2xl font-semibold">How Does Booking.com Free Cancellation Work?</h2>
+        <p>
+          Many hotels and accommodations on Booking.com offer free cancellation at <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link> (USA) up to a specific deadline. If you cancel before that deadline, you typically receive a full refund according to the property’s terms.
+        </p>
+        <p>
+          Benefits of free cancellation include:<br/><br/>
+Flexible travel planning<br/><br/>
+No cancellation fees before the deadline<br/><br/>
+Easier itinerary changes<br/><br/>
+Refund eligibility based on the property’s policy<br/><br/>
+Always review the cancellation date listed in your reservation details.<br/><br/>
+
+        </p>
+
+        <h2 className="text-2xl font-semibold">What Happens If You Cancel After the Free Cancellation Deadline?</h2>
+        <p>
+          If you cancel after the free cancellation period expires, the property may:<br/><br/>
+Charge for the first night’s stay<br/><br/>
+Charge a percentage of the booking cost<br/><br/>
+Charge the full reservation amount<br/><br/>
+Offer no refund for prepaid bookings<br/><br/>
+
+The exact fee depends on the property’s cancellation policy.
+
+        </p>
+        <h2 className="text-2xl font-semibold">Are Booking.com Refunds Guaranteed?</h2>
+        <p>
+          No. Booking.com refunds are determined by the property’s cancellation terms. You may receive:<br/>
+A full refund<br/>
+A partial refund<br/>
+No refund for non-refundable reservations<br/>
+Refund processing times vary depending on the accommodation and payment method.<br/>
+USA: <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link><br /><br />
+
+        </p>
+
+        <h2 className="text-2xl font-semibold">Can I Change My Booking Instead of Cancelling?</h2>
+        <p>
+          Yes. Many properties allow guests to modify:<br/><br/>
+Travel dates<br/><br/>
+• Room types<br/><br/>
+• Number of guests<br/><br/>
+Special requests<br/><br/>
+Availability and price differences may apply. If online changes are unavailable, contact the property directly through Booking.com messaging.
+
+        </p>
+        <h2 className="text-2xl font-semibold">Booking.com Cancellation Policy FAQs</h2>
+        <h4 className="text-xl font-semibold">Can I cancel a Booking.com reservation for free?</h4>
+        <p>
+          Yes, if your reservation includes free cancellation (+18888434146 (USA)) and you cancel before the stated deadline.
+        </p>
+
+         <h4 className="text-xl font-semibold">How do I know if my booking is refundable?</h4>
+        <p>
+          Check your booking confirmation or reservation details in your Booking.com account. The refund policy is displayed under the cancellation section.
+        </p>
+
+          <h4 className="text-xl font-semibold">How long does a Booking.com refund take?</h4>
+        <p>
+         Refund times vary by property and payment provider. Many refunds are processed within several business days, although some may take longer.
+        </p>
+
+           <h4 className="text-xl font-semibold">Can I cancel a non-refundable booking?</h4>
+        <p>
+        You can usually request cancellation, but the property may keep part or all of the payment.<br/>
+        according to its policy.
+        </p>
+        <h2 className="text-2xl font-semibold">What if my travel plans change unexpectedly?</h2>
+        <p>
+          Contact the property assessor as soon as possible. Some accommodations may offer flexibility even whenthe originalbookingterms arerestrictive.
+        </p>
+
+        <h2 className="text-2xl font-semibold">Does Booking.com charge a cancellation fee?</h2>
+        <p>
+          Booking.com generally follows the property’s cancellation rules. Any fees are typically determined by the accommodation provider rather than Booking.com itself.
+
+        </p>
+        <h2 className="text-2xl font-semibold">Tips Before Cancelling a Booking.com Reservation</h2>
+        <p>
+          Review the property’s cancellation deadline.<br/>
+ Check whether your booking is refundable.<br/>
+ Read the accommodation’s specific terms and conditions.<br/> 
+ Save your cancellation confirmation.<br/>
+Monitor your payment method for refund updates.<br/>
+
+        </p>
+        <h2 className="text-2xl font-semibold">Final Thoughts</h2>
+        <p>
+          The Booking.com cancellation policy <Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link>(USA) varies by property, making it important to review your reservation details before cancelling. Free cancellation bookings offer the most flexibility, while non-refundable reservations may result in fees or loss of payment. Checking your booking terms early can help you avoid unexpected charges and make informed travel decisions.
+
+          <br/><br/>
+
+          USA:<Link to="tel:18888434146" className="text-blue-600 underline">18888434146</Link>
+        </p>
+        
+      </div>
+    )
+  },
+
+     {
+    id: 6,
+    slug: "booking-com-contact-number-customer-service-help-centre-customer-care",
+    metatitle:
+      "",
+    metadescription:
+      "",
+    canonical:
+      "https://www.globaltravel-holdings.com/blog/booking-com-contact-number-customer-service-help-centre-customer-care",
+
+    title: "Booking.com Contact Number: Customer Service, Help Centre & Customer Care",
+    category: "booking",
+    date: "2026-08-12",
+    author: "Global Travel Team",
+    authorAvatar:
+      "https://www.globaltravel-holdings.com/assets/Travel%20o%20sun%20logo%20png-0728f093.png",
+
+    readingTime: "15 min read",
+    views: 1000,
+    likes: 170,
+    popularScore: 2,
+
+    image: "",
+    coverImage:
+      "",
+
+    tags: [
+      "Cheap International Flight",
+      "Domestic Travel",
+      "International Travel",
+    ],
+
+    excerpt:
+      "",
+    relatedPosts: [1, 3],
+
+    content: (
+      <div className="space-y-6 text-gray-700 leading-relaxed">
+        <p>
+          If you need Booking.com customer service, <Link to="tel:18888434146" className="text-blue-600 underline">+18888434146</Link> (USA), these commonly published customer support numbers are: <Link to="tel:18888434146" className="text-blue-600 underline">+18888434146</Link> (USA)
+    
+        </p>
+        <p>
+          Always verify the number shown in your Booking.com reservation, app, or Help Centre before sharing booking information.
+        </p>
+
+        <h2 className="text-2xl font-semibold">Booking.com Customer Care and Support</h2>
+        <p>
+         Booking.com customer care <Link to="tel:18888434146" className="text-blue-600 underline">+18888434146</Link> (USA) can help with hotel reservations, vacation rentals, cancellations, refunds, payment questions, booking modifications, and travel support. For the fastest service, have your reservation number and PIN ready before contacting Booking.com customer service.
+
+        </p>
+
+        <h3 className="text-xl font-semibold">Booking.com Help Centre</h3>
+        <p>
+          The Booking.com Help Centre is available 24/7 for: •Managing reservations<br/>
+•Cancelling bookings<br/>
+•Requesting refunds<br/>
+•Contacting accommodation providers<br/>
+•Updating guest information<br/>
+•Checking booking status<br/>
+
+        </p>
+
+        <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+        <h4 className="text-xl font-semibold">1. How do I contact Booking.com about a refund?</h4>
+        <p>
+          Contact Booking.com customer service through the Help Centre or by phone. +18888434146 (USA)  Refund eligibility depends on the property's cancellation policy and booking conditions.
+
+        </p>
+
+         <h4 className="text-xl font-semibold">2. Can I cancel my Booking.com reservation?</h4>
+        <p>
+         Yes. Many reservations can be cancelled online. Review the cancellation policy in your booking confirmation before cancelling.
+
+
+        </p>
+
+
+         <h4 className="text-xl font-semibold">3. How do I change a flight booked through Booking.com?</h4>
+        <p>
+     Open your booking through the Booking.com Help Centre and follow the modification<br/><br/>
+options. If changes are unavailable online, contact customer care.
+
+
+        </p>
+
+
+         <h4 className="text-xl font-semibold">4. Can I make a new booking by phone?</h4>
+        <p>
+        Yes. Booking.com customer service can guide you through booking options, pricing, and availability.
+
+        </p>
+
+
+         <h4 className="text-xl font-semibold">5. What should I do about baggage issues?</h4>
+        <p>
+       For flights booked through Booking.com, baggage issues are generally handled by the airline. Booking.com customer service can help direct you to the correct airline support channel.
+        </p>
+        <h2 className="text-2xl font-semibold">Why Contact Booking.com Customer Service?</h2>
+        <p>
+
+          Travellers commonly contact Booking.com for: •Refund requests<br/><br/>
+•Booking cancellations<br/><br/>
+•Flight changes<br/><br/>
+•Reservation confirmations<br/><br/>
+•Payment issues<br/><br/>
+•Property communication<br/><br/>
+•Travel emergencies<br/><br/>
+
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          Final Thoughts
+        </h2>
+        <p>
+          The fastest way to resolve most issues is through the Booking.com Help Centre or the<br/>
+Contact options are available within your reservation. <Link to="tel:18888434146" className="text-blue-600 underline">+18888434146</Link> (USA)  Keep your booking number available and verify all contact information through official Booking.com channels.
+
+        </p>
+      <p>
+       USA: <Link to="tel:18888434146" className="text-blue-600 underline">+18888434146</Link>
       </p>
       </div>
     )

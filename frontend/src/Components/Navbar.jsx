@@ -9,6 +9,8 @@ export default function Navbar() {
   let [currentLang, setCurrentLang] = useState("EN");
   let langRef = useRef(null);
 
+  let [openDropdown,setOpenDropdown]= useState(null)
+
    const languages = [
     { name: "English", code: "en", label: "EN" },
     { name: "Hindi", code: "hi", label: "HI" },
@@ -25,6 +27,12 @@ export default function Navbar() {
     { title: "Home", path: "/" },
     { title: "Flights", path: "/flights" },
     { title: "Hotels", path: "/hotels" },
+    { title: "Agency Support",
+      subtitle:[
+        {subtitle:"Travelocity",path:'/agency-support/travelocity-blog'},
+        {subtitle:"Booking",path:'/agency-support/booking-blog'},
+      ]
+     },
     { title: "Cars", path: "/cars" },
     { title: "Cruise", path: "/cruise" },
     { title: "Packages", path: "/packages" },
@@ -117,19 +125,80 @@ export default function Navbar() {
     </div>
 
     <nav className="flex flex-col gap-1.5 p-5">
-      {navbar.map((item, i) => (
-        <NavLink
-          key={i}
-          to={item.path}
-          onClick={() => setOpen(false)}
-          className={({ isActive }) => `
-            text-base font-bold py-3 px-4 rounded-xl transition-all duration-200 uppercase tracking-wide
-            ${isActive ? "bg-emerald-50 text-emerald-600" : "hover:bg-gray-50 hover:pl-6 text-gray-700 hover:text-[#111111]"}
-          `}
+     {navbar.map((item, i) => (
+  <div key={i} className="w-full">
+
+    {item.subtitle ? (
+      <>
+        {/* Parent */}
+        <button
+          onClick={() =>
+            setOpenDropdown(
+              openDropdown === item.title ? null : item.title
+            )
+          }
+          className="w-full flex items-center justify-between text-base font-bold py-3 px-4 rounded-xl transition-all duration-200 uppercase tracking-wide text-gray-700 hover:bg-gray-50 hover:text-[#111111]"
         >
-          {item.title}
-        </NavLink>
-      ))}
+          <span>{item.title}</span>
+
+          <ChevronDown
+            size={18}
+            className={`transition-transform duration-300 ${
+              openDropdown === item.title ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        {/* Mobile Submenu */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ${
+            openDropdown === item.title
+              ? "max-h-40 opacity-100"
+              : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="ml-4 mt-1 mb-2 pl-3 border-l-2 border-emerald-100">
+            {item.subtitle.map((sub, index) => (
+              <NavLink
+                key={index}
+                to={sub.path}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) => `
+                  block py-2.5 px-4 rounded-lg text-sm font-semibold
+                  transition-all duration-200
+                  ${
+                    isActive
+                      ? "bg-emerald-50 text-emerald-600"
+                      : "text-gray-500 hover:bg-emerald-50 hover:text-emerald-600"
+                  }
+                `}
+              >
+                {sub.subtitle}
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </>
+    ) : (
+      <NavLink
+        to={item.path}
+        onClick={() => setOpen(false)}
+        className={({ isActive }) => `
+          block text-base font-bold py-3 px-4 rounded-xl
+          transition-all duration-200 uppercase tracking-wide
+          ${
+            isActive
+              ? "bg-emerald-50 text-emerald-600"
+              : "hover:bg-gray-50 hover:pl-6 text-gray-700 hover:text-[#111111]"
+          }
+        `}
+      >
+        {item.title}
+      </NavLink>
+    )}
+
+  </div>
+))}
     </nav>
 
     <div className="mt-auto p-6 border-t border-gray-100 bg-gray-50/50">
@@ -160,19 +229,81 @@ export default function Navbar() {
   <div className="flex items-center gap-10 tracking-[1.5px]">
 
     <nav className="hidden md:flex gap-10 items-center tracking-[1.5px]">
-      {navbar.map((item, i) => (
-        <NavLink
-          key={i}
-          to={item.path}
-          className={({ isActive }) => `
-            text-[14px] font-['Poppins'] font-bold tracking-wider relative group uppercase transition-colors duration-200
-            ${isActive ? "text-emerald-600" : "text-[#111111] hover:text-emerald-600"}
-          `}
-        >
-          {item.title}
-          <span className="absolute -bottom-1.5 left-1/2 w-0 h-[2px] bg-emerald-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-        </NavLink>
-      ))}
+     {navbar.map((item, i) => (
+ <div
+  key={i}
+  className="relative group"
+  onMouseEnter={() => setOpenDropdown(item.title)}
+  onMouseLeave={() => setOpenDropdown(null)}
+>
+  {item.subtitle ? (
+    <>
+      {/* Parent */}
+      <button
+        className="flex items-center gap-1 text-[14px] font-['Poppins'] font-bold tracking-wider uppercase text-[#111111] hover:text-emerald-600 transition-colors duration-200"
+      >
+        {item.title}
+
+        <ChevronDown
+          size={15}
+          className="transition-transform duration-300 group-hover:rotate-180"
+        />
+      </button>
+
+      {/* Dropdown */}
+      <div
+        className={`
+          absolute top-full left-1/2 -translate-x-1/2 pt-4
+          transition-all duration-200
+          ${
+            openDropdown === item.title
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible -translate-y-2 pointer-events-none"
+          }
+        `}
+      >
+        <div className="w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+
+          {item.subtitle.map((sub, index) => (
+            <NavLink
+              key={index}
+              to={sub.path}
+              onClick={() => setOpenDropdown(null)}
+              className={({ isActive }) => `
+                block px-5 py-3.5 text-sm font-semibold
+                transition-all duration-200
+                ${
+                  isActive
+                    ? "bg-emerald-50 text-emerald-600"
+                    : "text-gray-700 hover:bg-emerald-50 hover:text-emerald-600"
+                }
+              `}
+            >
+              {sub.subtitle}
+            </NavLink>
+          ))}
+
+        </div>
+      </div>
+    </>
+  ) : (
+    <NavLink
+      to={item.path}
+      className={({ isActive }) => `
+        text-[14px] font-['Poppins'] font-bold tracking-wider
+        uppercase transition-colors duration-200
+        ${
+          isActive
+            ? "text-emerald-600"
+            : "text-[#111111] hover:text-emerald-600"
+        }
+      `}
+    >
+      {item.title}
+    </NavLink>
+  )}
+</div>
+))}
     </nav>
 
     <div className="flex items-center gap-4">

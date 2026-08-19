@@ -1,12 +1,15 @@
 export let faqdata = {
 
   "booking_services": [
-    { "question": "How do I book flights and hotels online?", "answer": "You can easily search, compare, and book flights or hotels through our platform by entering your destination, dates, and preferences." },
-    { "question": "Can I book international travel from one platform?", "answer": " Yes, you can book international flights, hotels, and complete travel packages in one place." },
-    { "question": "Do I need an account to make a booking?", "answer": " No, but creating an account helps you manage bookings and receive updates easily." },
+    { "question": "What travel services does Global Travel Holdings offer?", "answer": "Global Travel Holdings offers a wide range of travel services, including flight bookings, hotel reservations, car rentals, cruise vacations, and customized vacation packages. Whether you're planning a business trip, family holiday, honeymoon, or international getaway, our travel specialists are here to help." },
+    { "question": "Can I book flights and hotels online?", "answer": " Yes. You can book flights and hotels online with the assistance of our experienced travel team. We help you compare travel options, secure competitive pricing, and simplify the booking process for a smooth travel experience." },
+    { "question": "Can I book domestic and international travel?", "answer": "Absolutely. We assist travelers with both domestic and international journey  arrangements. Whether you're planning a trip within the USA or journey ing abroad, Global Travel Holdings can help you book flights, hotels, car rentals, cruises, and vacation packages tailored to your journey  plans." },
     { "question": "How will I receive my booking confirmation?", "answer": " You will get instant confirmation via email and SMS after successful booking." },
-    { "question": "Can I book last-minute travel deals?", "answer": " Yes, we offer last-minute flight and hotel deals based on availability." },
-    { "question": "Is it safe to book travel online?", "answer": " Yes, our platform uses secure payment gateways to ensure safe transactions." }
+    { "question": "What types of vacation packages are available?", "answer": "We offer a variety of vacation packages to suit different journey  styles and budgets, including honeymoon packages, family vacations, beach holidays, luxury getaways, cruise vacations, and customized journey  packages. Our team works with you to create an itinerary that matches your destination, schedule, and preferences." },
+    { "question": "Can I book cruises and cruise vacation packages?", "answer": "Yes. We offer a selection of cruise vacations, including family cruises, luxury cruises, all-inclusive cruise packages, and seasonal cruise deals. Our journey  specialists can help you choose the right itinerary and assist you throughout the booking process." },
+    { "question": "How can I find affordable journey  deals?", "answer": "Booking in advance, being flexible with your journey  dates, and comparing available options are great ways to save on journey . At Global Travel Holdings, we help journey ers explore affordable flight deals, hotel offers, vacation packages, cruise specials, and car rental promotions to maximize value." },
+    { "question": "Can I plan a complete vacation with Global Travel Holdings?", "answer": "Yes. We can help you plan every aspect of your trip, including flights, hotels, airport transportation, car rentals, cruises, and vacation packages. Our goal is to provide a seamless journey  planning experience from your departure to your return home." },
+     { "question": "How can I get started with planning my next trip?", "answer": "Getting started is easy. Simply contact Global Travel Holdings and share your destination, journey  dates, budget, and preferences. Our journey  experts will recommend suitable journey  options, answer your questions, and help you book the services you need for a memorable and hassle-free journey." }
   ],
 
   "payment_pricing": [

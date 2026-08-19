@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 import { ArrowRight, Dot } from "lucide-react";
 
-import { blogPosts } from "../../data/blog";
-import BlogList from "./BlogList";
+import { blogPosts } from "../../../data/blog";
+import TravelocityBlogList from "./TravelocityBlogList";
 import { Helmet } from "react-helmet-async";
 
 
-export default function BlogDetails() {
+export default function TravelocityBlogDetails() {
 
   let { slug } = useParams();
   let post = blogPosts.find(p => p.slug === slug);
@@ -115,7 +115,7 @@ export default function BlogDetails() {
                   </p>
 
                   <Link
-                    to={`/blog/${item.slug}`}
+                    to={`/agency-support/travelocity-blog/${item.slug}`}
                     className="inline-flex items-center gap-1 mt-4 text-green-600 font-medium hover:gap-2 transition"
                   >
                     Read More <ArrowRight size={16} />

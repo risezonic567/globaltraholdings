@@ -1,5 +1,5 @@
 import React from "react";
-import { blogPosts } from "../../data/blog";
+import { blogPosts } from "../../../data/blog";
 import { NavLink } from "react-router-dom";
 import {
   ArrowRight,
@@ -10,26 +10,27 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-export default function BlogList() {
+export default function TravelocityBlogList() {
  
   const blogdata = blogPosts.filter(
-    (item) => item.category?.toLowerCase() === "cheap-flights"
+    (item) => item.category?.toLowerCase() === "travelocity"
   );
 
   return (
     <>
       <Helmet>
-        <title> Blogs</title>
+        <title>Travelocity Blogs</title>
         <link
           rel="canonical"
-          href="https://www.globaltravel-holdings.com/agency-support/blog"
+          href="https://www.globaltravel-holdings.com/agency-support/travelocity-blog"
         />
       </Helmet>
 
+      {/* Header */}
       <section className="w-full bg-gradient-to-r from-green-100 to-orange-100">
         <div className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-center text-3xl font-bold">
-             Blogs
+            Travelocity Blogs
           </h2>
         </div>
       </section>
@@ -90,7 +91,7 @@ export default function BlogList() {
 
                 {/* Read More */}
                 <NavLink
-                  to={`/blog/${item.slug}`}
+                  to={`/agency-support/travelocity-blog/${item.slug}`}
                   className="mt-4 inline-flex items-center gap-1 text-green-600 font-medium hover:gap-2 transition"
                 >
                   Read More
@@ -101,9 +102,10 @@ export default function BlogList() {
           ))}
         </div>
 
+        {/* No Blogs */}
         {blogdata.length === 0 && (
           <div className="text-center py-10 text-gray-500">
-            No  blogs found.
+            No Travelocity blogs found.
           </div>
         )}
       </section>

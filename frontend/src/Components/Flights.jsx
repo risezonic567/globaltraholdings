@@ -155,15 +155,16 @@ export default function Flights() {
 
                 <div className="relative z-10 flex flex-col justify-center items-center min-h-[90vh] px-4">
 
-                    <div className="text-center text-white mb-8">
-                        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-2xl">
-                            Find & Book
-                            <span className="text-green-500"> Amazing Flights</span>
+                    <div className=" text-white mb-8">
+                        <h1 className="text-2xl text-center md:text-4xl font-extrabold leading-tight drop-shadow-2xl">
+                           Book Cheap Flights & Airline Tickets Online
                         </h1>
 
-                        <p className="mt-4 text-gray-100 text-lg max-w-2xl mx-auto drop-shadow-md">
-                            Search domestic & international flights at the best prices.
+                        <p className="mt-4 text-gray-100 text-lg max-w-2xl  drop-shadow-md">
+                            Finding the right flight at a competitive price can make travel planning easier. Global Travel Holdings helps travelers explore cheap flights, airline tickets, flight deals, and airfare options for domestic and international travel.<br/>    Whether you are planning a business trip, family vacation, weekend getaway, or international journey, you can explore available flights based on your destination, travel dates, preferred itinerary, and budget. Compare available routes, airlines, schedules, and fares to find a flight option that fits your travel plans.
                         </p>
+
+                       
                     </div>
 
                     <div className="w-full max-w-7xl bg-white/70 md:mt-16 backdrop-blur-2xl rounded-3xl shadow-2xl p-5 md:p-7 border border-white/20">

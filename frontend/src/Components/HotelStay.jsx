@@ -65,10 +65,11 @@ export default function HotelStay() {
                     className='mb-12 border-l-4 border-green-500 pl-6'>
                         <h2 className='text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3'>
                             <HotelIcon size={40} className='text-green-600 bg-gray-400/20 rounded-2xl' />
-                            Luxury <span className="text-green-500">Hotel</span> Stays
+                          Book Hotels <span className='text-green-600'>& Find Hotel Deals</span>  
                         </h2>
-                        <p className='text-gray-500 text-lg mt-3 max-w-2xl leading-relaxed'>
-                            Handpicked premium accommodations worldwide, offering comfort, elegance, and unforgettable travel experiences.
+                        <p className='text-gray-500 text-lg mt-3 max-w-7xl leading-relaxed'>
+                            Flexible travel dates and seasonal promotions can help travelers save on airfare. Whether you are traveling domestically or internationally, compare airline fares, schedules, and routes to find the option that best fits your journey.  Whether you need a budget stay, a business hotel near the city center, or a luxury resort. Find accommodations that match your travel needs. 
+                            You can compare hotel prices, amenities, guest reviews, and locations to find the right stay with confidence. 
                         </p>
                     </motion.div>
 

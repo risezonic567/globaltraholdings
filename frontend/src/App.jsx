@@ -41,6 +41,11 @@ export default function App() {
   let Services = lazy(() => import('./Components/OurServices'))
   let BlogDetail = lazy(() => import('./Pages/blog/BlogDetails'))
   let BlogList = lazy(() => import('./Pages/blog/BlogList'))
+  let TravelocityBlogList = lazy(()=>import('./Pages/SupportAgencyBlogs/travelocity/TravelocityBlogList'))
+  let TravelocityBlogDetails = lazy(()=>import('./Pages/SupportAgencyBlogs/travelocity/TravelocityBlogDetails'))
+
+  let BookingBlogList = lazy(()=>import('./Pages/SupportAgencyBlogs/booking/BookingBlogList'))
+  let BookingBlogDetails = lazy(()=>import('./Pages/SupportAgencyBlogs/booking/BookingBlogDetails'))
   let FlightResult = lazy(() => import('./Components/FlightResult'))
   let Passengers = lazy(() => import('./Components/Passengers'))
 
@@ -87,6 +92,15 @@ export default function App() {
 
             <Route path='/blog' element={<BlogList />} />
             <Route path='/blog/:slug' element={<BlogDetail />} />
+
+            <Route path='/agency-support/travelocity-blog' element = {<TravelocityBlogList/>}/>
+            <Route path='/agency-support/travelocity-blog/:slug' element = {<TravelocityBlogDetails/>}/>
+
+            <Route path='/agency-support/booking-blog' element = {<BookingBlogList/>}/>
+            <Route path='/agency-support/booking-blog/:slug' element = {<BookingBlogDetails/>}/>
+
+
+
             <Route path='/flight-results' element={<FlightResult />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
