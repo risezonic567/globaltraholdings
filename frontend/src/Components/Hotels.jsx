@@ -28,17 +28,18 @@ export default function Hotels() {
 
     return (
         <>
-           <Helmet>
-                    
-                    <link rel="canonical" href="https://www.globaltravel-holdings.com/hotels" />
-                </Helmet>
+            <Helmet>
 
-            <section className='w-full h-[70vh] md:h-[85vh] relative z-50'>
+                <link rel="canonical" href="https://www.globaltravel-holdings.com/hotels" />
+            </Helmet>
+
+            <section className='w-full h-[70vh] md:h-[85vh] relative'>
+
                 <motion.div
                     initial={{ opacity: 0, scale: 1.15 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className='absolute inset-0'
+                    className=' inset-0'
                 >
                     <img
                         src="/images/banner/hotels.jpg.jpeg"
@@ -51,10 +52,38 @@ export default function Hotels() {
 
                 </motion.div>
 
+                {/* Banner Content */}
+                <div className="absolute inset-0 flex items-center justify-center px-4">
+                    <div className="max-w-6xl text-center text-white">
+
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-4xl md:text-6xl font-bold mb-5"
+                        >
+                            Book Cheap Hotels Worldwide 
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-base md:text-xl text-gray-100"
+                        >
+                            Finding the right hotel can make your trip more comfortable and convenient, whether you are planning a business trip, family vacation, weekend getaway, or international holiday. Global Travel Holdings helps you explore cheap hotels, affordable hotel rooms, luxury properties, and accommodation options in destinations worldwide. Compare properties by location, amenities, room types, availability, and rates to find a stay that suits your trip.
+                        </motion.p>
+
+                    </div>
+                </div>
+
+
+
                 {/* <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent'></div> */}
 
 
                 <div className='absolute bottom-20 w-full px-3'>
+
                     <div className='max-w-7xl mx-auto backdrop-blur-xl bg-white shadow-2xl rounded-3xl p-5 md:p-7 border border-white/30'>
 
                         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4'>

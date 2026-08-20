@@ -8,6 +8,8 @@ import Testimonials from './Testimonials'
 import Faq from './Faq'
 import { Helmet } from 'react-helmet-async'
 import FlightSearchBox from './HomeFlightSearch'
+import DomesticInternationalTravel from './DomesticFlights'
+import WhyChooseGlobalTravel from './WhyChooseUs'
 
 export default function Home() {
     const videoRef = useRef(null)
@@ -201,6 +203,10 @@ export default function Home() {
             </section>
 
             <section className="w-full max-w-full overflow-hidden">
+                <DomesticInternationalTravel/>
+            </section>
+
+            <section className="w-full max-w-full overflow-hidden">
                 <HotelStay />
             </section>
 
@@ -209,6 +215,13 @@ export default function Home() {
                 data-aos="fade-down-right"
             >
                 <PremiumSpecials />
+            </section>
+
+             <section
+                className="w-full max-w-full overflow-hidden"
+              
+            >
+                <WhyChooseGlobalTravel/>
             </section>
 
             <section

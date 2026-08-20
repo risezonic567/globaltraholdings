@@ -8,8 +8,20 @@ import { useDispatch } from 'react-redux';
 import { motion } from "framer-motion";
 
 import { fetchFlights } from '../redux/FlightSlice';
+import CheapFlightDeals from "./CheapFlightDeals";
+import DomesticInternationalFlights from "./DomesticInternationalFlights";
+import AffordableAirfare from "./AffordableAirfare";
+import OnlineFlightBooking from "./OnlineFlightBooking";
+import OneWayRoundTrip from "./OneWayRoundTrip";
+import LastMinuteFlights from "./LastMinuteFlights";
+import InternationalFlightBooking from "./InternationalFlightBooking";
+import WhyChooseGlobalTravel from "./WhyChooseGlobalTravel";
+import BookNextFlight from "./BookNextFlight";
+import FlightFAQ from "./FlightFAQ";
 import FlightAbout from './FlightAbout';
 import { Helmet } from 'react-helmet-async';
+
+
 
 export default function Flights() {
 
@@ -437,7 +449,42 @@ export default function Flights() {
                     </div>
                 </div>
             </motion.section>
-            <FlightAbout />
+             <CheapFlightDeals />
+
+        {/* 3. Domestic + International */}
+        <DomesticInternationalFlights />
+
+        {/* 4. Affordable Airfare */}
+        <AffordableAirfare />
+
+        {/* 5. Online Booking */}
+        <OnlineFlightBooking />
+
+        {/* 6. One Way / Round Trip */}
+        <OneWayRoundTrip />
+
+        {/* 7. Last Minute */}
+        <LastMinuteFlights />
+
+        {/* 8. International Flights */}
+        <InternationalFlightBooking />
+
+        {/* 9. Existing Flight About */}
+        <FlightAbout />
+
+        {/* 10. Why Global Travel */}
+        <WhyChooseGlobalTravel />
+
+        {/* 11. CTA */}
+        <BookNextFlight />
+
+        {/* 12. FAQ */}
+        <FlightFAQ />
+
+
+
+
+            
 
         </>
 
