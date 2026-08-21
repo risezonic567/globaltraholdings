@@ -151,57 +151,58 @@ export default function Flights() {
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/flights" />
 
                 <script type="application/ld+json">
-                    {`
-{
-@context: "https://schema.org",
-@graph: [
-{
-@type: "WebPage",
-@id: "https://www.globaltravel-holdings.com/flights#webpage",
-url: "https://www.globaltravel-holdings.com/flights",
-name: "Book Cheap Flights & Airline Ticket | Global Travel Holdings",
-description: "Book Cheap flights and arline tickets with Global Travel Hlodings Explore flight deals, domestic and international routes, affordable airfare and flexible options",
-isPartOf: {
-@id: "https://www.globaltravel-holdings.com/#website"
-},
-breadcrumb: {
-@id: "https://www.globaltravel-holdings.com/flights#breadcrumb"
-},
-mainEntity: {
-@id: "https://www.globaltravel-holdings.com/flights#service"
-}
-},
-{
-@type: "Service",
-@id: "https://www.globaltravel-holdings.com/flights#service",
-name: "Flight Booking",
-description: "Flight booking services for domestic and international travel.",
-serviceType: "Flight Booking",
-provider: {
-@id: "https://www.globaltravel-holdings.com/#organization"
-}
-},
-{
-@type: "BreadcrumbList",
-@id: "https://www.globaltravel-holdings.com/flights#breadcrumb",
-itemListElement: [
-{
-@type: "ListItem",
-position: 1,
-name: "Home",
-item: "https://www.globaltravel-holdings.com/"
-},
-{
-@type: "ListItem",
-position: 2,
-name: "Flights",
-item: "https://www.globaltravel-holdings.com/flights"
-}
-]
-}
-]
-}`}
-                </script>
+  {`
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.globaltravel-holdings.com/flights#webpage",
+        "url": "https://www.globaltravel-holdings.com/flights",
+        "name": "Book Cheap Flights & Airline Ticket | Global Travel Holdings",
+        "description": "Book cheap flights and airline tickets with Global Travel Holdings. Explore flight deals, domestic and international routes, affordable airfare and flexible options.",
+        "isPartOf": {
+          "@id": "https://www.globaltravel-holdings.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://www.globaltravel-holdings.com/flights#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://www.globaltravel-holdings.com/flights#service"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.globaltravel-holdings.com/flights#service",
+        "name": "Flight Booking",
+        "description": "Flight booking services for domestic and international travel.",
+        "serviceType": "Flight Booking",
+        "provider": {
+          "@id": "https://www.globaltravel-holdings.com/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.globaltravel-holdings.com/flights#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.globaltravel-holdings.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Flights",
+            "item": "https://www.globaltravel-holdings.com/flights"
+          }
+        ]
+      }
+    ]
+  }
+  `}
+</script>
 
             </Helmet>
 
