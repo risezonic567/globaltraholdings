@@ -149,6 +149,60 @@ export default function Flights() {
                 <meta name="description" content="Book Cheap flights and arline tickets  with Global Travel Hlodings Explore flight deals, domestic and international routes, affordable airfare and flexible options." />
 
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/flights" />
+
+                <script type="application/ld+json">
+                    {`
+{
+@context: "https://schema.org",
+@graph: [
+{
+@type: "WebPage",
+@id: "https://www.globaltravel-holdings.com/flights#webpage",
+url: "https://www.globaltravel-holdings.com/flights",
+name: "Book Cheap Flights & Airline Ticket | Global Travel Holdings",
+description: "Book Cheap flights and arline tickets with Global Travel Hlodings Explore flight deals, domestic and international routes, affordable airfare and flexible options",
+isPartOf: {
+@id: "https://www.globaltravel-holdings.com/#website"
+},
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/flights#breadcrumb"
+},
+mainEntity: {
+@id: "https://www.globaltravel-holdings.com/flights#service"
+}
+},
+{
+@type: "Service",
+@id: "https://www.globaltravel-holdings.com/flights#service",
+name: "Flight Booking",
+description: "Flight booking services for domestic and international travel.",
+serviceType: "Flight Booking",
+provider: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+}
+},
+{
+@type: "BreadcrumbList",
+@id: "https://www.globaltravel-holdings.com/flights#breadcrumb",
+itemListElement: [
+{
+@type: "ListItem",
+position: 1,
+name: "Home",
+item: "https://www.globaltravel-holdings.com/"
+},
+{
+@type: "ListItem",
+position: 2,
+name: "Flights",
+item: "https://www.globaltravel-holdings.com/flights"
+}
+]
+}
+]
+}`}
+                </script>
+
             </Helmet>
 
 
@@ -171,14 +225,14 @@ export default function Flights() {
 
                     <div className=" text-white mb-8">
                         <h1 className="text-2xl text-center md:text-4xl font-extrabold leading-tight drop-shadow-2xl">
-                           Book Cheap Flights & Airline Tickets Online
+                            Book Cheap Flights & Airline Tickets Online
                         </h1>
 
                         <p className="mt-4 text-gray-100 text-lg max-w-6xl  drop-shadow-md">
-                            Finding the right flight at a competitive price can make travel planning easier. Global Travel Holdings helps travelers explore cheap flights, airline tickets, flight deals, and airfare options for domestic and international travel.<br/>    Whether you are planning a business trip, family vacation, weekend getaway, or international journey, you can explore available flights based on your destination, travel dates, preferred itinerary, and budget. Compare available routes, airlines, schedules, and fares to find a flight option that fits your travel plans.
+                            Finding the right flight at a competitive price can make travel planning easier. Global Travel Holdings helps travelers explore cheap flights, airline tickets, flight deals, and airfare options for domestic and international travel.<br />    Whether you are planning a business trip, family vacation, weekend getaway, or international journey, you can explore available flights based on your destination, travel dates, preferred itinerary, and budget. Compare available routes, airlines, schedules, and fares to find a flight option that fits your travel plans.
                         </p>
 
-                       
+
                     </div>
 
                     <div className="w-full max-w-7xl bg-white/70 md:mt-16 backdrop-blur-2xl rounded-3xl shadow-2xl p-5 md:p-7 border border-white/20">
@@ -210,8 +264,8 @@ export default function Flights() {
                         <form
                             onSubmit={handleSubmit}
                             className={`grid gap-4 items-center ${trip === "roundtrip"
-                                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7"
-                                    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+                                ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7"
+                                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
                                 }`}
                         >
 
@@ -451,42 +505,42 @@ export default function Flights() {
                     </div>
                 </div>
             </motion.section>
-             <CheapFlightDeals />
+            <CheapFlightDeals />
 
-        {/* 3. Domestic + International */}
-        <DomesticInternationalFlights />
+            {/* 3. Domestic + International */}
+            <DomesticInternationalFlights />
 
-        {/* 4. Affordable Airfare */}
-        <AffordableAirfare />
+            {/* 4. Affordable Airfare */}
+            <AffordableAirfare />
 
-        {/* 5. Online Booking */}
-        <OnlineFlightBooking />
+            {/* 5. Online Booking */}
+            <OnlineFlightBooking />
 
-        {/* 6. One Way / Round Trip */}
-        <OneWayRoundTrip />
+            {/* 6. One Way / Round Trip */}
+            <OneWayRoundTrip />
 
-        {/* 7. Last Minute */}
-        <LastMinuteFlights />
+            {/* 7. Last Minute */}
+            <LastMinuteFlights />
 
-        {/* 8. International Flights */}
-        <InternationalFlightBooking />
+            {/* 8. International Flights */}
+            <InternationalFlightBooking />
 
-        {/* 9. Existing Flight About */}
-        <FlightAbout />
+            {/* 9. Existing Flight About */}
+            <FlightAbout />
 
-        {/* 10. Why Global Travel */}
-        <WhyChooseGlobalTravel />
+            {/* 10. Why Global Travel */}
+            <WhyChooseGlobalTravel />
 
-        {/* 11. CTA */}
-        <BookNextFlight />
+            {/* 11. CTA */}
+            <BookNextFlight />
 
-        {/* 12. FAQ */}
-        <FlightFAQ />
-
-
+            {/* 12. FAQ */}
+            <FlightFAQ />
 
 
-            
+
+
+
 
         </>
 

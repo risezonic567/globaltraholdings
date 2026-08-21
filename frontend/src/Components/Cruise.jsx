@@ -37,6 +37,59 @@ export default function Cruise() {
     <meta name="description" content="Book cruise vacation package with Global Travel Holdings. Explore luxury cruise deals family cruises specials, and destinations for various styles and budgets." />
             
             <link rel="canonical" href="https://www.globaltravel-holdings.com/cruise" />
+
+            <script type="application/ld+json">
+            {`
+{
+@context: "https://schema.org",
+@graph: [
+{
+@type: "WebPage",
+@id: "https://www.globaltravel-holdings.com/cruise#webpage",
+url: "https://www.globaltravel-holdings.com/cruise",
+name: "Book Cruise Packages Deals | Global Travel Holdings",
+description: "Book cruise vacation package with Global Travel Holdings. Explore luxury cruise deals family cruises specials, and destinations for various styles and budgets.",
+isPartOf: {
+@id: "https://www.globaltravel-holdings.com/#website"
+},
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/cruise#breadcrumb"
+},
+mainEntity: {
+@id: "https://www.globaltravel-holdings.com/cruise#service"
+}
+},
+{
+@type: "Service",
+@id: "https://www.globaltravel-holdings.com/cruise#service",
+name: "Cruise Booking",
+description: "Cruise booking services for travelers planning vacation and leisure cruises.",
+serviceType: "Cruise Booking",
+provider: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+}
+},
+{
+@type: "BreadcrumbList",
+@id: "https://www.globaltravel-holdings.com/cruise#breadcrumb",
+itemListElement: [
+{
+@type: "ListItem",
+position: 1,
+name: "Home",
+item: "https://www.globaltravel-holdings.com/"
+},
+{
+@type: "ListItem",
+position: 2,
+name: "Cruise",
+item: "https://www.globaltravel-holdings.com/cruise"
+}
+]
+}
+]
+}`}
+</script>
         </Helmet>
 
       <section className='w-full relative h-[70vh] md:h-[85vh] overflow-hidden'>

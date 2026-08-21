@@ -43,6 +43,60 @@ export default function Hotels() {
                 <meta name="description" content="Book Cheap Hotels and Hotel Rooms with Global Travel Holdings. Explore Hotel deals, affordable stays luxury hotels, family-friendly  and worldwide options. " />
 
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/hotels" />
+
+                <script type="application/ld+json">
+                {`
+{
+@context: "https://schema.org",
+@graph: [
+{
+@type: "WebPage",
+@id: "https://www.globaltravel-holdings.com/hotels#webpage",
+url: "https://www.globaltravel-holdings.com/hotels",
+name: "Book Cheap Hotel Rooms Worldwide Global Travel Holdings",
+description: "Book Cheap Hotels and Hotel Rooms with Global Travel Holdings. Explore Hotel deals, affordable stays luxury hotels, family-friendly and worldwide options.",
+isPartOf: {
+@id: "https://www.globaltravel-holdings.com/#website"
+},
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/hotels#breadcrumb"
+},
+mainEntity: {
+@id: "https://www.globaltravel-holdings.com/hotels#service"
+}
+},
+{
+@type: "Service",
+@id: "https://www.globaltravel-holdings.com/hotels#service",
+name: "Hotel Booking",
+description: "Hotel booking services for travelers looking for accommodation options worldwide.",
+serviceType: "Hotel Booking",
+provider: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+}
+},
+{
+@type: "BreadcrumbList",
+@id: "https://www.globaltravel-holdings.com/hotels#breadcrumb",
+itemListElement: [
+{
+@type: "ListItem",
+position: 1,
+name: "Home",
+item: "https://www.globaltravel-holdings.com/"
+},
+{
+@type: "ListItem",
+position: 2,
+name: "Hotels",
+item: "https://www.globaltravel-holdings.com/hotels"
+}
+]
+}
+]
+}`}
+</script>
+
             </Helmet>
 
             <section className='w-full h-[70vh] md:h-[85vh] relative'>

@@ -29,6 +29,42 @@ export default function Home() {
                     rel="canonical"
                     href="https://www.globaltravel-holdings.com/"
                 />
+                <script type="application/ld+json">
+                    {`  {
+                        @context: "https://schema.org",
+                    @graph: [
+                    {
+                        @type: "Organization",
+                    @id: "https://www.globaltravel-holdings.com/#organization",
+                    name: "Global Travel Holdings",
+                    url: "https://www.globaltravel-holdings.com/"
+},
+                    {
+                        @type: "WebSite",
+                    @id: "https://www.globaltravel-holdings.com/#website",
+                    url: "https://www.globaltravel-holdings.com/",
+                    name: "Global Travel Holdings",
+                    publisher: {
+                        @id: "https://www.globaltravel-holdings.com/#organization"
+}
+},
+                    {
+                        @type: "WebPage",
+                    @id: "https://www.globaltravel-holdings.com/#webpage",
+                    url: "https://www.globaltravel-holdings.com/",
+                    name: "Travel Booking: Flights, Hotels, Cars & Vacation Packages",
+                    description: "Book flights, hotels, car rentals, cruises and vacation packages with Global Travel Holdings. Compare travel options for domestic and international trips.",
+                    isPartOf: {
+                        @id: "https://www.globaltravel-holdings.com/#website"
+},
+                    about: {
+                        @id: "https://www.globaltravel-holdings.com/#organization"
+}
+}
+                    ]
+}
+                    `}
+                </script>
             </Helmet>
 
             <section className="relative w-full min-h-screen overflow-visible">
@@ -205,7 +241,7 @@ export default function Home() {
             </section>
 
             <section className="w-full max-w-full overflow-hidden">
-                <DomesticInternationalTravel/>
+                <DomesticInternationalTravel />
             </section>
 
             <section className="w-full max-w-full overflow-hidden">
@@ -219,11 +255,11 @@ export default function Home() {
                 <PremiumSpecials />
             </section>
 
-             <section
+            <section
                 className="w-full max-w-full overflow-hidden"
-              
+
             >
-                <WhyChooseGlobalTravel/>
+                <WhyChooseGlobalTravel />
             </section>
 
             <section

@@ -39,6 +39,59 @@ export default function Car() {
         <meta name="description" content="Book cheap car Rentals and car hire with Global Travel Holdings. Explore rental deals, airport car rentals, economy and luxury vehicles, and flexible  options." />
                 
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/cars" />
+
+                <script type="application/ld+json">
+                {`
+{
+@context: "https://schema.org",
+@graph: [
+{
+@type: "WebPage",
+@id: "https://www.globaltravel-holdings.com/cars#webpage",
+url: "https://www.globaltravel-holdings.com/cars",
+name: "Cheap Car Rentals & Car Hire Deals | Global Travel Holdings",
+description: "Book cheap car Rentals and car hire with Global Travel Holdings. Explore rental deals, airport car rentals, economy and luxury vehicles, and flexible options.",
+isPartOf: {
+@id: "https://www.globaltravel-holdings.com/#website"
+},
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/cars#breadcrumb"
+},
+mainEntity: {
+@id: "https://www.globaltravel-holdings.com/cars#service"
+}
+},
+{
+@type: "Service",
+@id: "https://www.globaltravel-holdings.com/cars#service",
+name: "Car Rental",
+description: "Car rental services for travelers looking for convenient transportation at destinations worldwide.",
+serviceType: "Car Rental",
+provider: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+}
+},
+{
+@type: "BreadcrumbList",
+@id: "https://www.globaltravel-holdings.com/cars#breadcrumb",
+itemListElement: [
+{
+@type: "ListItem",
+position: 1,
+name: "Home",
+item: "https://www.globaltravel-holdings.com/"
+},
+{
+@type: "ListItem",
+position: 2,
+name: "Cars",
+item: "https://www.globaltravel-holdings.com/cars"
+}
+]
+}
+]
+}`}
+</script>
             </Helmet>
 
      <section className='relative w-full h-[650px] overflow-hidden'>

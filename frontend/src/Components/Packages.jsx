@@ -25,6 +25,58 @@ export default function Packages() {
             <meta name="description" content="Explore vacation and honeymoon packages with Global Travel Holdings. Discover affordable, luxury, romantic, family, and travel deals for destinations worldwide." />
                     
                     <link rel="canonical" href="https://www.globaltravel-holdings.com/packages" />
+                    <script type="application/ld+json">
+                    {`
+{
+@context: "https://schema.org",
+@graph: [
+{
+@type: "WebPage",
+@id: "https://www.globaltravel-holdings.com/packages#webpage",
+url: "https://www.globaltravel-holdings.com/packages",
+name: "Vacation & Honeymoon Packages | Global Travel Holdings",
+description: "Explore vacation and honeymoon packages with Global Travel Holdings. Discover affordable, luxury, romantic, family, and travel deals for destinations worldwide.",
+isPartOf: {
+@id: "https://www.globaltravel-holdings.com/#website"
+},
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/packages#breadcrumb"
+},
+mainEntity: {
+@id: "https://www.globaltravel-holdings.com/packages#service"
+}
+},
+{
+@type: "Service",
+@id: "https://www.globaltravel-holdings.com/packages#service",
+name: "Vacation Packages & Honeymoon Packages",
+description: "Vacation and honeymoon packages for couples, families and travelers looking for holiday deals and romantic getaways worldwide.",
+serviceType: "Vacation Packages",
+provider: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+}
+},
+{
+@type: "BreadcrumbList",
+@id: "https://www.globaltravel-holdings.com/packages#breadcrumb",
+itemListElement: [
+{
+@type: "ListItem",
+position: 1,
+name: "Home",
+item: "https://www.globaltravel-holdings.com/"
+},
+{
+@type: "ListItem",
+position: 2,
+name: "Packages",
+item: "https://www.globaltravel-holdings.com/packages"
+}
+]
+}
+]
+}`}
+</script>
                 </Helmet>
                   <div className='bg-gradient-to-b from-gray-50 to-white'>
 
