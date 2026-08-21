@@ -5,7 +5,15 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
 import { Helmet } from 'react-helmet-async'
 import { NavLink } from 'react-router-dom'
-
+import BestCarRentalDeals from "./cars/BestCarRentalDeals";
+import AirportCarRental from "./cars/AirportCarRental";
+import AirportPickupDrop from "./cars/AirportPickupDrop";
+import EconomyLuxuryCars from "./cars/EconomyLuxuryCars";
+import AffordableCarDeals from "./cars/AffordableCarDeals";
+import WeeklyCarRentals from "./cars/WeeklyCarRentals";
+import FlexibleCarRental from "./cars/FlexibleCarRental";
+import CarFAQ from './cars/CarFAQ'
+import WhyChooseCarBooking from './cars/WhyChooseCarBooking'
 
 
 export default function Car() {
@@ -27,6 +35,8 @@ export default function Car() {
   return (
     <>
        <Helmet>
+        <title>Cheap Car Rentals & Car Hire Deals | Global Travel Holdings </title>
+        <meta name="description" content="Book cheap car Rentals and car hire with Global Travel Holdings. Explore rental deals, airport car rentals, economy and luxury vehicles, and flexible  options." />
                 
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/cars" />
             </Helmet>
@@ -52,7 +62,7 @@ export default function Car() {
       transition={{ duration: 0.8 }}
       className='text-white text-3xl md:text-6xl font-bold leading-tight'
     >
-      Find Your Perfect Rental Car
+      Cheap Car Rentals and Car Hire
     </motion.h1>
 
     <motion.p
@@ -61,7 +71,7 @@ export default function Car() {
       transition={{ delay: 0.3, duration: 0.8 }}
       className='text-gray-200 mt-4 text-sm md:text-lg max-w-2xl mx-auto'
     >
-      Book premium cars at affordable prices with flexible pickup & drop services.
+      Global Travel Holdings helps travelers explore car rental options for business trips, family vacations, road trips, weekend getaways, and other types of travel. Travelers can compare available vehicles based on vehicle type, rental needs, location, and travel plans.
     </motion.p>
 
   </div>
@@ -70,7 +80,7 @@ export default function Car() {
     initial={{ opacity: 0, y: 80 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.5, duration: 0.8 }}
-    className='absolute bottom-10 w-full px-4 flex justify-center z-10'
+    className='absolute bottom-28 w-full px-4 flex justify-center z-10'
   >
 
     <div className='max-w-7xl w-full bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-4 md:p-6'>
@@ -186,7 +196,7 @@ export default function Car() {
     viewport={{ once: true }}
     className='text-xl sm:text-2xl md:text-3xl pt-5 py-4 font-semibold leading-3 text-green-600 text-center'
   >
-    Book Car Rentals Online for Easy & Flexible Travel
+    Book Cheap Car Rentals Online
   </motion.h1>
 
   <motion.p
@@ -196,7 +206,7 @@ export default function Car() {
     viewport={{ once: true }}
     className='p-2 sm:p-3 md:p-4 max-w-5xl text-base text-gray-600 mx-auto text-center'
   >
-    Getting around your destination should be convenient and stress-free. With Global Travel Holdings LLC, our <b>car rental booking online</b> platform makes it easy to find and reserve the right vehicle for your journey. Whether you need a car for business, leisure, or daily travel, we provide flexible options to match your needs.
+   Booking a car rental online allows travelers to explore available vehicles and choose an option based on their destination, travel dates, vehicle type, and rental requirements. Global Travel Holdings provides car rental options that may include cars, SUVs, and larger vehicles for families or groups, depending on availability. 
   </motion.p>
 
 </div>
@@ -251,6 +261,20 @@ export default function Car() {
 
 </section>
 
+<BestCarRentalDeals />
+
+<AirportCarRental />
+
+<AirportPickupDrop />
+
+<EconomyLuxuryCars />
+
+<AffordableCarDeals />
+
+<WeeklyCarRentals />
+
+<FlexibleCarRental />
+
 <motion.div
   variants={fadeUp}
   initial="hidden"
@@ -266,55 +290,8 @@ export default function Car() {
   </NavLink>
 </motion.div>
 
-<section className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-3 py-10'>
-
-  <motion.div
-    variants={fadeUp}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    whileHover={{ y: -8 }}
-    className='shadow-2xl z-50 rounded-2xl shadow-gray-600 p-6 bg-white'
-  >
-
-    <h2 className='text-xl sm:text-2xl md:text-2xl'>
-      Why Choose Global Travel Holdings LLC for Car Rentals
-    </h2>
-
-    <ul className='pl-10 list-disc leading-relaxed p-6'>
-      <li>Wide range of vehicles for different travel needs</li>
-      <li>Easy comparison of pricing and features</li>
-      <li>Secure booking and payment process</li>
-      <li>Flexible rental options</li>
-      <li>Dedicated customer support</li>
-    </ul>
-
-  </motion.div>
-
-  <motion.div
-    variants={fadeUp}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    whileHover={{ y: -8 }}
-    className='shadow-2xl z-50 rounded-2xl shadow-gray-600 p-6 bg-white/40'
-  >
-
-    <h2 className='text-xl sm:text-2xl md:text-2xl'>
-      Tips for Booking the Best Car Rental
-    </h2>
-
-    <ul className='pl-10 list-disc leading-relaxed py-4'>
-      <li>Book in advance for better prices</li>
-      <li>Choose the right vehicle based on your travel needs</li>
-      <li>Compare rental policies and fuel options</li>
-      <li>Check pickup and drop-off locations carefully</li>
-      <li>Look for seasonal offers and discounts</li>
-    </ul>
-
-  </motion.div>
-
-</section>
+<WhyChooseCarBooking/>
+  <CarFAQ/>
     </>
   )
 }

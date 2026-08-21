@@ -145,6 +145,8 @@ export default function Flights() {
         <>
 
             <Helmet>
+                <title>Book Cheap Flights & Airline Ticket | Global Travel Holdings</title>
+                <meta name="description" content="Book Cheap flights and arline tickets  with Global Travel Hlodings Explore flight deals, domestic and international routes, affordable airfare and flexible options." />
 
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/flights" />
             </Helmet>

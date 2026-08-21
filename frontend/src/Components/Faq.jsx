@@ -37,9 +37,9 @@ export default function Faq() {
           {/* <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest uppercase bg-green-50 text-green-700 rounded-full border border-green-100">
             Customer Support
           </span> */}
-          <h1 className="text-5xl md:text-4xl font-extrabold mb-6 tracking-tight text-slate-900">
+          <h3 className="text-5xl md:text-4xl font-extrabold mb-6 tracking-tight text-slate-900">
             How can we <span className="text-green-600">help you Today?</span>
-          </h1>
+          </h3>
           <p className="max-w-2xl mx-auto text-slate-500 text-lg leading-relaxed">
            Find quick answers and reliable support for your travel plans. Browse our help center, explore common topics, or connect with our team for assistance with flight bookings, hotel reservations, cancellations, refunds, and more.
           </p>

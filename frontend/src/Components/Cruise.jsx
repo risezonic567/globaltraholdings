@@ -6,6 +6,15 @@ import CruiseDestination from './CruiseDestination'
 import { NavLink } from 'react-router-dom'
 import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async'
+import CruisePackageDeals from "./cruise/CruisePackageDeals";
+import BookCruisesOnline from "./cruise/BookCruisesOnline";
+import LuxuryCruisePackages from "./cruise/LuxuryCruisePackages";
+import FamilyCruisePackages from "./cruise/FamilyCruisePackages";
+import CheapCruiseDeals from "./cruise/CheapCruiseDeals";
+import LastMinuteCruiseDeals from "./cruise/LastMinuteCruiseDeals";
+import CruiseDestinations from "./cruise/CruiseDestinations";
+import CruiseVacationTypes from "./cruise/CruiseVacationTypes";
+import CruiseFAQ from './cruise/CruiseFAQ'
 
 export default function Cruise() {
   const fadeUp = {
@@ -24,6 +33,8 @@ export default function Cruise() {
   return (
     <>
    <Helmet>
+    <title>Book Cruise Packages Deals | Global Travel Holdings</title>
+    <meta name="description" content="Book cruise vacation package with Global Travel Holdings. Explore luxury cruise deals family cruises specials, and destinations for various styles and budgets." />
             
             <link rel="canonical" href="https://www.globaltravel-holdings.com/cruise" />
         </Helmet>
@@ -47,13 +58,12 @@ export default function Cruise() {
           transition={{ duration: 0.8 }}
           className='absolute top-24 md:top-28 left-1/2 -translate-x-1/2 text-center z-20 px-4'
         >
-          <h1 className='text-3xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-2xl'>
-            Luxury Cruise Booking
+          <h1 className='text-3xl sm:text-5xl md:text-4xl font-bold text-white drop-shadow-2xl'>
+            Book Cruise Vacation Packages Online | Global Travel Holdings
           </h1>
 
-          <p className='text-white/90 text-sm sm:text-lg max-w-3xl mx-auto pt-4 leading-relaxed'>
-            Explore breathtaking cruise vacations with premium comfort,
-            world-class experiences, and unforgettable ocean journeys.
+          <p className='text-white/90 text-sm sm:text-lg max-w-6xl mx-auto pt-4 leading-relaxed'>
+           Global Travel Holdings helps travelers explore cruise vacation packages for family vacations, romantic getaways, luxury travel, group trips, and other types of holidays. Explore cruise options, compare itineraries, destinations, and available packages, and choose a cruise that fits your travel plans and budget. 
           </p>
         </motion.div>
 
@@ -247,6 +257,22 @@ export default function Cruise() {
 
       </section>
 
+      <CruisePackageDeals />
+
+<BookCruisesOnline />
+
+<LuxuryCruisePackages />
+
+<FamilyCruisePackages />
+
+<CheapCruiseDeals />
+
+<LastMinuteCruiseDeals />
+
+<CruiseDestinations />
+
+<CruiseVacationTypes />
+
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -412,6 +438,7 @@ export default function Cruise() {
 
 
       <CruiseDestination/>
+      <CruiseFAQ/>
 
     </>
   )

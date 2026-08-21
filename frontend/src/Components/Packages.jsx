@@ -21,6 +21,8 @@ export default function Packages() {
     return (
         <>
            <Helmet>
+            <title>Vacation & Honeymoon Packages | Global Travel Holdings</title>
+            <meta name="description" content="Explore vacation and honeymoon packages with Global Travel Holdings. Discover affordable, luxury, romantic, family, and travel deals for destinations worldwide." />
                     
                     <link rel="canonical" href="https://www.globaltravel-holdings.com/packages" />
                 </Helmet>
@@ -49,18 +51,18 @@ export default function Packages() {
                             initial={{ opacity: 0, y: 60 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
-                            className="text-white font-bold text-3xl sm:text-5xl md:text-6xl max-w-5xl leading-tight"
+                            className="text-white font-bold text-3xl sm:text-5xl md:text-4xl max-w-5xl leading-tight"
                         >
-                            Premium Business Class Flights at Exclusive Fares
+                            Vacation Packages and Honeymoon Packages for Every Destination | Global Travel Holdings
                         </motion.h1>
 
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
-                            className=' mt-5 text-lg md:text-2xl text-white font-semibold max-w-3xl mx-auto'
+                            className=' mt-5 text-lg md:text-xl text-white  max-w-6xl mx-auto'
                         >
-                            Discover luxury travel experiences with exclusive global packages.
+                            Planning a vacation that you will remember is easier when all the pieces come together in one package. At Global Travel Holdings you can look at vacation packages made for couples, families, honeymooners and people who love adventure traveling to places over the world. Whether you are thinking about a trip to the beach, an exciting trip to another country or the honeymoon you have always wanted you will find travel choices that fit your style and your money.
                         </motion.p>
 
                         <motion.div

@@ -23,6 +23,8 @@ export default function Home() {
     return (
         <div className="w-full max-w-full overflow-x-hidden">
             <Helmet>
+                <title>Travel Booking: Flights, Hotels, Cars & Vacation Packages</title>
+                <meta name="description" content="Book flights, hotels, car rentals, cruises and vacation packages with Global Travel Holdings. Compare travel options for domestic and international trips." />
                 <link
                     rel="canonical"
                     href="https://www.globaltravel-holdings.com/"

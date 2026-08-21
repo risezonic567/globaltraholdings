@@ -8,6 +8,16 @@ import Testimonials from './Testimonials';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import HotelIntro from "./hotels/HotelIntro";
+import CheapHotels from "./hotels/CheapHotels";
+import LuxuryHotels from "./hotels/LuxuryHotels";
+import FamilyHotels from "./hotels/FamilyHotels";
+import LastMinuteHotels from "./hotels/LastMinuteHotels";
+import HotelDeals from "./hotels/HotelDeals";
+import HotelPackages from "./hotels/HotelPackages";
+import OnlineHotelBooking from "./hotels/OnlineHotelBooking";
+import WhyChooseHotelBooking from "./hotels/WhyChooseHotelBooking";
+import HotelFAQ from "./hotels/HotelFAQ";
 
 export default function Hotels() {
 
@@ -29,6 +39,8 @@ export default function Hotels() {
     return (
         <>
             <Helmet>
+                <title>Book Cheap Hotel Rooms Worldwide Global Travel Holdings</title>
+                <meta name="description" content="Book Cheap Hotels and Hotel Rooms with Global Travel Holdings. Explore Hotel deals, affordable stays luxury hotels, family-friendly  and worldwide options. " />
 
                 <link rel="canonical" href="https://www.globaltravel-holdings.com/hotels" />
             </Helmet>
@@ -191,6 +203,23 @@ export default function Hotels() {
                     </div>
                 </div>
             </section>
+            <HotelIntro />
+
+<CheapHotels />
+
+<LuxuryHotels />
+
+<FamilyHotels />
+
+<LastMinuteHotels />
+
+<HotelDeals />
+
+<HotelPackages />
+
+<OnlineHotelBooking />
+
+<WhyChooseHotelBooking />
             <section className='relative max-w-7xl mx-auto px-3 py-10'>
                 <div className='flex flex-col items-center text-center mb-12'>
                     <div className="flex items-center gap-3 ">
@@ -356,16 +385,18 @@ export default function Hotels() {
 
             <Testimonials />
             <Property />
+
+            <HotelFAQ />
             <div className='py-10 mx-auto px-3 text-center'>
                 <NavLink to="tel:+91 8588809690" className="px-8 py-3 bg-gray-800  text-center  text-white rounded-full font-semibold hover:bg-green-600 transition-colors shadow-lg">
                     Booking Enquiry
                 </NavLink>
             </div>
-            <section className="max-w-7xl mx-auto px-4 py-14">
+            {/* <section className="max-w-7xl mx-auto px-4 py-14">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                    {/* Card 1 */}
+                   
                     <div className="rounded-2xl border border-gray-200 p-8 shadow-lg transition duration-300 bg-white">
 
                         <h2 className="text-2xl md:text-3xl font-semibold text-green-600 leading-snug mb-6">
@@ -388,7 +419,7 @@ export default function Hotels() {
 
                     </div>
 
-                    {/* Card 2 */}
+                   
                     <div className="rounded-2xl border border-gray-200 p-8 shadow-lg transition duration-300 bg-white ">
 
                         <h2 className="text-2xl md:text-3xl font-semibold text-green-600 leading-snug mb-6">
@@ -413,7 +444,7 @@ export default function Hotels() {
 
                 </div>
 
-            </section>
+            </section> */}
         </>
     )
 }
