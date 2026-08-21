@@ -9,16 +9,40 @@ import {
 import React from "react";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+
+  const socialLinks = [
+  {
+    icon: FaFacebookF,
+    link: "https://www.facebook.com/globaltravelbookings/",
+    label: "Facebook",
+  },
+
+  {
+    icon: FaInstagram,
+    link: "https://www.instagram.com/globaltravel.booking/",
+    label: "Instagram",
+  },
+  {
+    icon: FaLinkedinIn,
+    link: "linkedin.com/company/globaltravelbooking/",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaYoutube,
+    link: "https://www.youtube.com/channel/UCA2Fp_jG4pq0L1Vv-cfLDng",
+    label: "LinkedIn",
+  },
+];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -87,27 +111,22 @@ export default function Footer() {
           {/* Social Icons */}
 
           <div className="flex gap-4 pt-2">
-
-            {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map(
-              (Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="group w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
-                >
-                  <Icon
-                    size={15}
-                    className="group-hover:scale-110 transition"
-                  />
-                </a>
-              )
-            )}
-
-          </div>
-           
-
-          
-
+  {socialLinks.map(({ icon: Icon, link, label }) => (
+    <a
+      key={label}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="group w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
+    >
+      <Icon
+        size={15}
+        className="group-hover:scale-110 transition"
+      />
+    </a>
+  ))}
+</div>
         </motion.div>
 
         
