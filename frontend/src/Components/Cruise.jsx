@@ -45,33 +45,33 @@ export default function Cruise() {
 @graph: [
 {
 @type: "WebPage",
-@id: "https://www.globaltravel-holdings.com/cruise#webpage",
+@id: "https://www.globaltravel-holdings.com/cruise/#webpage",
 url: "https://www.globaltravel-holdings.com/cruise",
-name: "Book Cruise Packages Deals | Global Travel Holdings",
-description: "Book cruise vacation package with Global Travel Holdings. Explore luxury cruise deals family cruises specials, and destinations for various styles and budgets.",
+name: "Cruise Vacations",
 isPartOf: {
 @id: "https://www.globaltravel-holdings.com/#website"
 },
-breadcrumb: {
-@id: "https://www.globaltravel-holdings.com/cruise#breadcrumb"
+about: {
+@id: "https://www.globaltravel-holdings.com/cruise/#service"
 },
-mainEntity: {
-@id: "https://www.globaltravel-holdings.com/cruise#service"
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/cruise/#breadcrumb"
 }
 },
 {
 @type: "Service",
-@id: "https://www.globaltravel-holdings.com/cruise#service",
+@id: "https://www.globaltravel-holdings.com/cruise/#service",
 name: "Cruise Booking",
-description: "Cruise booking services for travelers planning vacation and leisure cruises.",
-serviceType: "Cruise Booking",
+description: "Book cruise vacation package with Global Travel Holdings. Explore luxury cruise deals family cruises specials, and destinations for various styles and budgets..",
+url: "https://www.globaltravel-holdings.com/cruise",
 provider: {
 @id: "https://www.globaltravel-holdings.com/#organization"
-}
+},
+serviceType: "Cruise Booking"
 },
 {
 @type: "BreadcrumbList",
-@id: "https://www.globaltravel-holdings.com/cruise#breadcrumb",
+@id: "https://www.globaltravel-holdings.com/cruise/#breadcrumb",
 itemListElement: [
 {
 @type: "ListItem",
@@ -88,6 +88,7 @@ item: "https://www.globaltravel-holdings.com/cruise"
 ]
 }
 ]
+}
 }`}
 </script>
         </Helmet>

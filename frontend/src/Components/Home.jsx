@@ -30,38 +30,62 @@ export default function Home() {
                     href="https://www.globaltravel-holdings.com/"
                 />
                 <script type="application/ld+json">
-                    {`  {
-                        @context: "https://schema.org",
-                    @graph: [
-                    {
-                        @type: "Organization",
-                    @id: "https://www.globaltravel-holdings.com/#organization",
-                    name: "Global Travel Holdings",
-                    url: "https://www.globaltravel-holdings.com/"
-},
-                    {
-                        @type: "WebSite",
-                    @id: "https://www.globaltravel-holdings.com/#website",
-                    url: "https://www.globaltravel-holdings.com/",
-                    name: "Global Travel Holdings",
-                    publisher: {
-                        @id: "https://www.globaltravel-holdings.com/#organization"
+                    {` {
+@context: "https://schema.org",
+@graph: [
+{
+@type: "Organization",
+@id: "https://www.globaltravel-holdings.com/#organization",
+name: "Global Travel Holdings LLC",
+url: "https://www.globaltravel-holdings.com/",
+"description": "Global Travel Holdings LLC provides travel booking services for flights, hotels, car rentals, cruises, and vacation packages."
+logo: {
+@type: "ImageObject",
+@id: "https://www.globaltravel-holdings.com/#logo",
+url: "https://www.globaltravel-holdings.com/images/logo/gtb%20logo%202%20(1).png"
 }
 },
-                    {
-                        @type: "WebPage",
-                    @id: "https://www.globaltravel-holdings.com/#webpage",
-                    url: "https://www.globaltravel-holdings.com/",
-                    name: "Travel Booking: Flights, Hotels, Cars & Vacation Packages",
-                    description: "Book flights, hotels, car rentals, cruises and vacation packages with Global Travel Holdings. Compare travel options for domestic and international trips.",
-                    isPartOf: {
-                        @id: "https://www.globaltravel-holdings.com/#website"
+{
+@type: "WebSite",
+@id: "https://www.globaltravel-holdings.com/#website",
+url: "https://www.globaltravel-holdings.com/",
+name: "Global Travel Holdings",
+publisher: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+}
 },
-                    about: {
-                        @id: "https://www.globaltravel-holdings.com/#organization"
+{
+@type: "WebPage",
+@id: "https://www.globaltravel-holdings.com/#webpage",
+url: "https://www.globaltravel-holdings.com/",
+name: "Global Travel Holdings",
+description: "Book flights, hotels, car rentals, cruises and vacation packages with Global Travel Holdings. Compare travel options for domestic and international trips.",
+isPartOf: {
+@id: "https://www.globaltravel-holdings.com/#website"
+},
+about: {
+@id: "https://www.globaltravel-holdings.com/#organization"
+},
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/#breadcrumb"
+},
+mainEntity: {
+@id: "https://www.globaltravel-holdings.com/#organization"
 }
+},
+{
+@type: "BreadcrumbList",
+@id: "https://www.globaltravel-holdings.com/#breadcrumb",
+itemListElement: [
+{
+@type: "ListItem",
+position: 1,
+name: "Home",
+item: "https://www.globaltravel-holdings.com/"
 }
-                    ]
+]
+}
+]
 }
                     `}
                 </script>

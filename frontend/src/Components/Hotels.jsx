@@ -51,33 +51,33 @@ export default function Hotels() {
 @graph: [
 {
 @type: "WebPage",
-@id: "https://www.globaltravel-holdings.com/hotels#webpage",
+@id: "https://www.globaltravel-holdings.com/hotels/#webpage",
 url: "https://www.globaltravel-holdings.com/hotels",
-name: "Book Cheap Hotel Rooms Worldwide Global Travel Holdings",
-description: "Book Cheap Hotels and Hotel Rooms with Global Travel Holdings. Explore Hotel deals, affordable stays luxury hotels, family-friendly and worldwide options.",
+name: "Book Hotels Worldwide",
 isPartOf: {
 @id: "https://www.globaltravel-holdings.com/#website"
 },
-breadcrumb: {
-@id: "https://www.globaltravel-holdings.com/hotels#breadcrumb"
+about: {
+@id: "https://www.globaltravel-holdings.com/hotels/#service"
 },
-mainEntity: {
-@id: "https://www.globaltravel-holdings.com/hotels#service"
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/hotels/#breadcrumb"
 }
 },
 {
 @type: "Service",
-@id: "https://www.globaltravel-holdings.com/hotels#service",
+@id: "https://www.globaltravel-holdings.com/hotels/#service",
 name: "Hotel Booking",
-description: "Hotel booking services for travelers looking for accommodation options worldwide.",
-serviceType: "Hotel Booking",
+description: "Book Cheap Hotels and Hotel Rooms with Global Travel Holdings. Explore Hotel deals, affordable stays luxury hotels, family-friendly  and worldwide options. ",
+url: "https://www.globaltravel-holdings.com/hotels",
 provider: {
 @id: "https://www.globaltravel-holdings.com/#organization"
-}
+},
+serviceType: "Hotel Booking"
 },
 {
 @type: "BreadcrumbList",
-@id: "https://www.globaltravel-holdings.com/hotels#breadcrumb",
+@id: "https://www.globaltravel-holdings.com/hotels/#breadcrumb",
 itemListElement: [
 {
 @type: "ListItem",
@@ -92,6 +92,9 @@ name: "Hotels",
 item: "https://www.globaltravel-holdings.com/hotels"
 }
 ]
+}
+]
+}
 }
 ]
 }`}

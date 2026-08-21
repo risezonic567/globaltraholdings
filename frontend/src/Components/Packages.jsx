@@ -32,33 +32,33 @@ export default function Packages() {
 @graph: [
 {
 @type: "WebPage",
-@id: "https://www.globaltravel-holdings.com/packages#webpage",
+@id: "https://www.globaltravel-holdings.com/packages/#webpage",
 url: "https://www.globaltravel-holdings.com/packages",
-name: "Vacation & Honeymoon Packages | Global Travel Holdings",
-description: "Explore vacation and honeymoon packages with Global Travel Holdings. Discover affordable, luxury, romantic, family, and travel deals for destinations worldwide.",
+name: "Vacation Packages and Honeymoon Packages",
 isPartOf: {
 @id: "https://www.globaltravel-holdings.com/#website"
 },
-breadcrumb: {
-@id: "https://www.globaltravel-holdings.com/packages#breadcrumb"
+about: {
+@id: "https://www.globaltravel-holdings.com/packages/#service"
 },
-mainEntity: {
-@id: "https://www.globaltravel-holdings.com/packages#service"
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/packages/#breadcrumb"
 }
 },
 {
 @type: "Service",
-@id: "https://www.globaltravel-holdings.com/packages#service",
-name: "Vacation Packages & Honeymoon Packages",
-description: "Vacation and honeymoon packages for couples, families and travelers looking for holiday deals and romantic getaways worldwide.",
-serviceType: "Vacation Packages",
+@id: "https://www.globaltravel-holdings.com/packages/#service",
+name: "Vacation and Honeymoon Packages",
+description: "Explore vacation and honeymoon packages with Global Travel Holdings. Discover affordable, luxury, romantic, family, and travel deals for destinations worldwide..",
+url: "https://www.globaltravel-holdings.com/packages",
 provider: {
 @id: "https://www.globaltravel-holdings.com/#organization"
-}
+},
+serviceType: "Travel Packages"
 },
 {
 @type: "BreadcrumbList",
-@id: "https://www.globaltravel-holdings.com/packages#breadcrumb",
+@id: "https://www.globaltravel-holdings.com/packages/#breadcrumb",
 itemListElement: [
 {
 @type: "ListItem",
@@ -75,6 +75,7 @@ item: "https://www.globaltravel-holdings.com/packages"
 ]
 }
 ]
+}
 }`}
                 </script>
             </Helmet>

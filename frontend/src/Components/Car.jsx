@@ -47,33 +47,33 @@ export default function Car() {
 @graph: [
 {
 @type: "WebPage",
-@id: "https://www.globaltravel-holdings.com/cars#webpage",
+@id: "https://www.globaltravel-holdings.com/cars/#webpage",
 url: "https://www.globaltravel-holdings.com/cars",
-name: "Cheap Car Rentals & Car Hire Deals | Global Travel Holdings",
-description: "Book cheap car Rentals and car hire with Global Travel Holdings. Explore rental deals, airport car rentals, economy and luxury vehicles, and flexible options.",
+name: "Car Rental",
 isPartOf: {
 @id: "https://www.globaltravel-holdings.com/#website"
 },
-breadcrumb: {
-@id: "https://www.globaltravel-holdings.com/cars#breadcrumb"
+about: {
+@id: "https://www.globaltravel-holdings.com/cars/#service"
 },
-mainEntity: {
-@id: "https://www.globaltravel-holdings.com/cars#service"
+breadcrumb: {
+@id: "https://www.globaltravel-holdings.com/cars/#breadcrumb"
 }
 },
 {
 @type: "Service",
-@id: "https://www.globaltravel-holdings.com/cars#service",
+@id: "https://www.globaltravel-holdings.com/cars/#service",
 name: "Car Rental",
-description: "Car rental services for travelers looking for convenient transportation at destinations worldwide.",
-serviceType: "Car Rental",
+description: "Book cheap car Rentals and car hire with Global Travel Holdings. Explore rental deals, airport car rentals, economy and luxury vehicles, and flexible  options.",
+url: "https://www.globaltravel-holdings.com/cars",
 provider: {
 @id: "https://www.globaltravel-holdings.com/#organization"
-}
+},
+serviceType: "Car Rental"
 },
 {
 @type: "BreadcrumbList",
-@id: "https://www.globaltravel-holdings.com/cars#breadcrumb",
+@id: "https://www.globaltravel-holdings.com/cars/#breadcrumb",
 itemListElement: [
 {
 @type: "ListItem",
@@ -90,6 +90,7 @@ item: "https://www.globaltravel-holdings.com/cars"
 ]
 }
 ]
+}
 }`}
 </script>
             </Helmet>
