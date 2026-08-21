@@ -219,7 +219,7 @@ item: "https://www.globaltravel-holdings.com/flights"
                     alt="Flight Banner"
                 />
 
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/55" />
 
                 <div className="relative z-10 flex flex-col justify-center items-center min-h-[90vh] px-4">
 
