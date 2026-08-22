@@ -76,7 +76,7 @@ item: "https://www.globaltravel-holdings.com/packages"
 }
 ]
 }
-}`}
+`}
                 </script>
             </Helmet>
             <div className='bg-gradient-to-b from-gray-50 to-white'>
