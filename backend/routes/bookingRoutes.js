@@ -17,7 +17,7 @@ const paymentLimiter = rateLimit({
 router.post(
     "/create-payment",
     paymentLimiter,
-    authmidd,
+    
     createRazorpayOrder
 );
 

@@ -73,10 +73,10 @@ export default function FlightCard({ item }) {
   );
 
   let handleSelect = () => {
-    //  pura item (offer) save karo
+   
     localStorage.setItem("selectedOffer", JSON.stringify(item));
 
-    //  navigate karo
+   
     navigate(`/passengers/${offerId}`);
   };
 

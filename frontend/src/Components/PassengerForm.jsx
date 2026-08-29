@@ -59,121 +59,121 @@ export default function PassengerForm() {
     setFormData(updated);
   }
 
-  async function handleBooking() {
-    try {
+  // async function handleBooking() {
+  //   try {
 
-      let formattedData = formData.map((p) => {
-        let passengers = {
-          firstName: p.firstName,
+  //     let formattedData = formData.map((p) => {
+  //       let passengers = {
+  //         firstName: p.firstName,
 
-          middleName: p.middleName,
+  //         middleName: p.middleName,
 
-          lastName: p.lastName,
+  //         lastName: p.lastName,
 
-          gender:
-            p.gender === "male"
-              ? "M"
-              : "F",
+  //         gender:
+  //           p.gender === "male"
+  //             ? "M"
+  //             : "F",
 
-          dob: p.dob,
+  //         dob: p.dob,
 
-          nationality: country,
+  //         nationality: country,
 
-          type: p.type,
-        }
-        if (isInternational) {
-          passengers.passport = {
-            number:
-              p.passportNumber,
+  //         type: p.type,
+  //       }
+  //       if (isInternational) {
+  //         passengers.passport = {
+  //           number:
+  //             p.passportNumber,
 
-            country:
-              issuingCountry,
+  //           country:
+  //             issuingCountry,
 
-            expiry:
-              p.passportExpiry,
-          }
-        }
-        return passengers;
-      })
+  //           expiry:
+  //             p.passportExpiry,
+  //         }
+  //       }
+  //       return passengers;
+  //     })
 
-      // now create the the payment
+  //     // now create the the payment
 
-      let createPayemnt = await fetch("https://www.globaltravel-holdings.com/payment/create-payment", {
-        method: "POST", credentials: "include", headers: {
-          "Content-Type": "application/json"
-        }, body: JSON.stringify({
-          passengers: formattedData,
-          offerId: offerData.id
-        })
-      })
+  //     let createPayemnt = await fetch("https://www.globaltravel-holdings.com/payment/create-payment", {
+  //       method: "POST", credentials: "include", headers: {
+  //         "Content-Type": "application/json"
+  //       }, body: JSON.stringify({
+  //         passengers: formattedData,
+  //         offerId: offerData.id
+  //       })
+  //     })
 
-      let data = await createPayemnt.json();
+  //     let data = await createPayemnt.json();
 
-      if (!data.status) {
-        return alert(data.message)
-      }
+  //     if (!data.status) {
+  //       return alert(data.message)
+  //     }
 
-      let options = {
-        key: data.key,
-        amount: data.amount,
-        currency: data.currency,
-        order_id: data.orderId,
-        name: "Flight Booking",
-        description: "Secure Payment",
-        method: {
+  //     let options = {
+  //       key: data.key,
+  //       amount: data.amount,
+  //       currency: data.currency,
+  //       order_id: data.orderId,
+  //       name: "Flight Booking",
+  //       description: "Secure Payment",
+  //       method: {
 
-          upi: true,
+  //         upi: true,
 
-          card: true,
+  //         card: true,
 
-          netbanking: true,
+  //         netbanking: true,
 
-          wallet: true,
-        },
-        handler: async function (response) {
-          let verifySig = await fetch("https://www.globaltravel-holdings.com/payment/verify-payment", {
-            method: "POST", credentials: "include", headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              bookingId:
-                data.bookingId,
+  //         wallet: true,
+  //       },
+  //       handler: async function (response) {
+  //         let verifySig = await fetch("https://www.globaltravel-holdings.com/payment/verify-payment", {
+  //           method: "POST", credentials: "include", headers: {
+  //             "Content-Type": "application/json"
+  //           },
+  //           body: JSON.stringify({
+  //             bookingId:
+  //               data.bookingId,
 
-              razorpay_order_id:
-                response.razorpay_order_id,
+  //             razorpay_order_id:
+  //               response.razorpay_order_id,
 
-              razorpay_payment_id:
-                response.razorpay_payment_id,
+  //             razorpay_payment_id:
+  //               response.razorpay_payment_id,
 
-              razorpay_signature:
-                response.razorpay_signature,
-            })
-          })
-          // console.log(response,verifyData)
-          let verifyData = await verifySig.json()
-          if (verifyData.status) {
-            alert("Booking Confirmed")
-            // console.log(verifyData)
-            navigate(`/flights`)
-          }
-          else {
-            alert(verifyData.message)
-          }
-        }
-      }
+  //             razorpay_signature:
+  //               response.razorpay_signature,
+  //           })
+  //         })
+  //         // console.log(response,verifyData)
+  //         let verifyData = await verifySig.json()
+  //         if (verifyData.status) {
+  //           alert("Booking Confirmed")
+  //           // console.log(verifyData)
+  //           navigate(`/flights`)
+  //         }
+  //         else {
+  //           alert(verifyData.message)
+  //         }
+  //       }
+  //     }
 
-      let razorpay = new window.Razorpay(options)
-      razorpay.open()
-    } catch (error) {
+  //     let razorpay = new window.Razorpay(options)
+  //     razorpay.open()
+  //   } catch (error) {
 
-      // console.log(error);
+  //     // console.log(error);
 
-      alert(
-        `Booking failed:${error.message}`
-      );
-    }
+  //     alert(
+  //       `Booking failed:${error.message}`
+  //     );
+  //   }
 
-  }
+  // }
 
 
 
@@ -212,7 +212,7 @@ export default function PassengerForm() {
           key={p.id}
           className="bg-white border rounded-3xl p-6 mb-6 shadow-sm hover:shadow-md transition"
         >
-          {/* Header */}
+
           <div className="flex items-center justify-between mb-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-800">
@@ -368,10 +368,10 @@ export default function PassengerForm() {
           )}
         </div>
       ))}
-      {/* CTA Button */}
+
       {formData.length > 0 && (
         <div className="text-center mt-6">
-          <button onClick={handleBooking} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold shadow-md transition">
+          <button  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold shadow-md transition">
             Continue Booking
           </button>
         </div>
