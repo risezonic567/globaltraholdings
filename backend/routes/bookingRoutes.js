@@ -1,5 +1,5 @@
 import express from 'express'
-import { createRazorpayOrder, verifybooking } from '../controllers/bookingController.js'
+import { createRazorpayOrder,  sendBookingEmail,  verifybooking } from '../controllers/bookingController.js'
 import { authmidd } from '../middlewares/authMiddleware.js'
 import rateLimit from 'express-rate-limit';
 
@@ -14,12 +14,14 @@ const paymentLimiter = rateLimit({
     }
 });
 
+router.post("/send-details", sendBookingEmail);
+
 router.post(
     "/create-payment",
     paymentLimiter,
-    
     createRazorpayOrder
 );
+
 
 router.post(
     "/verify-payment",

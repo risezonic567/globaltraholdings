@@ -11,6 +11,7 @@ import rateLimit from 'express-rate-limit'
 import RedisStore from "rate-limit-redis";
 import flightRoutes from './routes/flightsRoute.js'
 import bookingRoutes from './routes/bookingRoutes.js'
+
 import dbconnect from './config/db.js'
 import { errormidd } from './middlewares/errormiddleware.js'
 import client, { connectRedis } from './config/redisConfig.js'
@@ -40,31 +41,34 @@ app.set("trust proxy",1);
 
 app.use(morgan("dev"))
 app.use(compression());
-await connectRedis()
-let limiter = rateLimit({
-    // yeah limiter ka data memory mai nahi balki redis mai store karega aur sare server ka data sync karega
-  store: new RedisStore({
-    sendCommand: (...args) => client.sendCommand(args),
-  }),
-  windowMs: 15 * 60 * 1000,
-  max: 1000,
-  message: {
-    status: 429,
-    message: "Too many requests, try again later ",
-  },
-});  // span or ddos attack se bachata hai
+// await connectRedis()
+// let limiter = rateLimit({
+//     // yeah limiter ka data memory mai nahi balki redis mai store karega aur sare server ka data sync karega
+//   store: new RedisStore({
+//     sendCommand: (...args) => client.sendCommand(args),
+//   }),
+//   windowMs: 15 * 60 * 1000,
+//   max: 1000,
+//   message: {
+//     status: 429,
+//     message: "Too many requests, try again later ",
+//   },
+// });  // span or ddos attack se bachata hai
 
-app.use("/api",limiter);
+// app.use("/api",limiter);
 dbconnect()
 
 app.use("/enquiry",enquiryRoutes)
 
 app.use("/api", flightRoutes)
 
+
 app.use("/payment", bookingRoutes)
 app.use("/user", userRoutes)
 app.use("/auth", oAuthRoutes)
 app.use(errormidd)
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT, () => {
+  console.log(`🚀 Server running on port ${process.env.PORT}`);
+});
 

@@ -59,6 +59,69 @@ export default function PassengerForm() {
     setFormData(updated);
   }
 
+  async function handleBooking() {
+  try {
+    const formattedData = formData.map((p) => {
+      const passenger = {
+        firstName: p.firstName,
+        middleName: p.middleName,
+        lastName: p.lastName,
+
+        gender:
+          p.gender === "male"
+            ? "M"
+            : "F",
+
+        dob: p.dob,
+        nationality: country,
+        type: p.type,
+      };
+
+      if (isInternational) {
+        passenger.passport = {
+          number: p.passportNumber,
+          country: issuingCountry,
+          expiry: p.passportExpiry,
+        };
+      }
+
+      return passenger;
+    });
+
+    const response = await fetch(
+      "http://localhost:5000/payment/send-details",
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          passengers: formattedData,
+          offerId: offerData.id,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!data.status) {
+      return alert(data.message);
+    }
+
+    alert("Booking request submitted successfully!");
+
+    navigate("/flights");
+
+  } catch (error) {
+    console.error(error);
+
+    alert(
+      `Booking failed: ${error.message}`
+    );
+  }
+}
+
   // async function handleBooking() {
   //   try {
 
@@ -371,7 +434,7 @@ export default function PassengerForm() {
 
       {formData.length > 0 && (
         <div className="text-center mt-6">
-          <button  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold shadow-md transition">
+          <button onClick={handleBooking} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold shadow-md transition">
             Continue Booking
           </button>
         </div>

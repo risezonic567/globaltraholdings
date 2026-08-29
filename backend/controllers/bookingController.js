@@ -1,8 +1,92 @@
-
 import Booking from "../models/Booking.js";
 
 import razorpay from "../utils/razarpay.js";
 import crypto from "crypto"
+import transport from "../utils/nodemailer.js";
+
+
+export const sendBookingEmail = async (req, res) => {
+  try {
+    const { passengers, offerId } = req.body;
+
+    if (!passengers || passengers.length === 0) {
+      return res.status(400).json({
+        status: false,
+        message: "Passenger details are required",
+      });
+    }
+
+    const passengerHTML = passengers
+      .map(
+        (p, index) => `
+          <div style="margin-bottom:20px;padding:15px;border:1px solid #ddd;">
+            <h3>Passenger ${index + 1}</h3>
+
+            <p><strong>Type:</strong> ${p.type}</p>
+            <p><strong>Name:</strong> ${p.firstName} ${p.middleName || ""} ${p.lastName}</p>
+            <p><strong>Gender:</strong> ${p.gender}</p>
+            <p><strong>Date of Birth:</strong> ${p.dob}</p>
+            <p><strong>Nationality:</strong> ${p.nationality}</p>
+
+            ${
+              p.passport
+                ? `
+                  <p><strong>Passport Number:</strong> ${p.passport.number}</p>
+                  <p><strong>Passport Country:</strong> ${p.passport.country}</p>
+                  <p><strong>Passport Expiry:</strong> ${p.passport.expiry}</p>
+                `
+                : ""
+            }
+          </div>
+        `
+      )
+      .join("");
+
+    const mailOptions = {
+      from: process.env.GMAIL_USER,
+
+      // jis Gmail par booking details chahiye
+      to: process.env.GMAIL_USER,
+
+      subject: `New Flight Booking - ${offerId}`,
+
+      html: `
+        <div style="font-family:Arial,sans-serif">
+
+          <h2>New Flight Booking Request</h2>
+
+          <p>
+            <strong>Offer ID:</strong> ${offerId}
+          </p>
+
+          <hr />
+
+          ${passengerHTML}
+
+        </div>
+      `,
+    };
+
+    await transport.sendMail(mailOptions);
+
+    return res.status(200).json({
+      status: true,
+      message: "Booking details sent successfully",
+    });
+
+
+  } catch (error) {
+  console.error("❌ EMAIL ERROR:", error);
+
+  return res.status(500).json({
+    status: false,
+    message: error.message,
+  });
+}
+};
+
+
+
 
 export let createRazorpayOrder = async (req, resp) => {
     try {
@@ -329,3 +413,4 @@ export let verifybooking = async (req, resp) => {
         });
     }
 }
+
