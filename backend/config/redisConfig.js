@@ -1,42 +1,42 @@
 import { createClient } from "redis";
 
+const redisUrl =
+  process.env.REDIS_URL || "redis://127.0.0.1:6379";
 
-// yaha par aap redis ko locally aur server dono par run kar sakte ho 
+console.log("🔗 Redis URL:", redisUrl);
 
-
-
-let isDocker = process.env.DOCKER === "true";
-
-let redisUrl = process.env.REDIS_URL || 
-  (isDocker
-    ? `redis://${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`
-    : "redis://127.0.0.1:6379");
-
-let client = createClient({
+const client = createClient({
   url: redisUrl,
 });
 
 client.on("error", (err) => {
-  // console.error(" Redis Error:", err);
+  console.error("❌ Redis Error:", err);
 });
 
 client.on("connect", () => {
-  // console.log(" Redis connecting...");
+  console.log("🔄 Redis connecting...");
 });
 
 client.on("ready", () => {
-  // console.log(" Redis connected successfully");
+  console.log("✅ Redis READY");
 });
 
-let connectRedis = async () => {
+client.on("end", () => {
+  console.log("🔴 Redis connection closed");
+});
+
+export const connectRedis = async () => {
   try {
     if (!client.isOpen) {
       await client.connect();
     }
+
+    console.log("✅ Redis connected successfully");
   } catch (err) {
-    // console.error(" Redis Connection Failed:", err);
+    console.error("❌ Redis Connection Failed:", err);
+
+    throw err;
   }
 };
 
-export { connectRedis };
 export default client;

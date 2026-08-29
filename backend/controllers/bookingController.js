@@ -6,6 +6,8 @@ import transport from "../utils/nodemailer.js";
 
 
 export const sendBookingEmail = async (req, res) => {
+       console.log("🔥 SEND DETAILS API HIT");
+
   try {
     const { passengers, offerId } = req.body;
 
@@ -43,10 +45,10 @@ export const sendBookingEmail = async (req, res) => {
       .join("");
 
     const mailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.USER_EMAIL,
 
       // jis Gmail par booking details chahiye
-      to: process.env.GMAIL_USER,
+      to: process.env.USER_EMAIL,
 
       subject: `New Flight Booking - ${offerId}`,
 
