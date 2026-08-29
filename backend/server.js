@@ -41,21 +41,21 @@ app.set("trust proxy",1);
 
 app.use(morgan("dev"))
 app.use(compression());
-// await connectRedis()
-// let limiter = rateLimit({
-//     // yeah limiter ka data memory mai nahi balki redis mai store karega aur sare server ka data sync karega
-//   store: new RedisStore({
-//     sendCommand: (...args) => client.sendCommand(args),
-//   }),
-//   windowMs: 15 * 60 * 1000,
-//   max: 1000,
-//   message: {
-//     status: 429,
-//     message: "Too many requests, try again later ",
-//   },
-// });  // span or ddos attack se bachata hai
+await connectRedis()
+let limiter = rateLimit({
+    // yeah limiter ka data memory mai nahi balki redis mai store karega aur sare server ka data sync karega
+  store: new RedisStore({
+    sendCommand: (...args) => client.sendCommand(args),
+  }),
+  windowMs: 15 * 60 * 1000,
+  max: 1000,
+  message: {
+    status: 429,
+    message: "Too many requests, try again later ",
+  },
+});  // span or ddos attack se bachata hai
 
-// app.use("/api",limiter);
+app.use("/api",limiter);
 dbconnect()
 
 app.use("/enquiry",enquiryRoutes)
