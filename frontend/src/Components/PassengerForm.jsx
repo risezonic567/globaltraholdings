@@ -43,6 +43,8 @@ export default function PassengerForm() {
       lastName: "",
       gender: "",
       dob: "",
+      phone:p.phone,
+      email:p.email,
 
       passportNumber: "",
       passportExpiry: "",
@@ -59,68 +61,68 @@ export default function PassengerForm() {
     setFormData(updated);
   }
 
-  async function handleBooking() {
-  try {
-    const formattedData = formData.map((p) => {
-      const passenger = {
-        firstName: p.firstName,
-        middleName: p.middleName,
-        lastName: p.lastName,
+  //   async function handleBooking() {
+  //   try {
+  //     const formattedData = formData.map((p) => {
+  //       const passenger = {
+  //         firstName: p.firstName,
+  //         middleName: p.middleName,
+  //         lastName: p.lastName,
 
-        gender:
-          p.gender === "male"
-            ? "M"
-            : "F",
+  //         gender:
+  //           p.gender === "male"
+  //             ? "M"
+  //             : "F",
 
-        dob: p.dob,
-        nationality: country,
-        type: p.type,
-      };
+  //         dob: p.dob,
+  //         nationality: country,
+  //         type: p.type,
+  //       };
 
-      if (isInternational) {
-        passenger.passport = {
-          number: p.passportNumber,
-          country: issuingCountry,
-          expiry: p.passportExpiry,
-        };
-      }
+  //       if (isInternational) {
+  //         passenger.passport = {
+  //           number: p.passportNumber,
+  //           country: issuingCountry,
+  //           expiry: p.passportExpiry,
+  //         };
+  //       }
 
-      return passenger;
-    });
+  //       return passenger;
+  //     });
 
-    const response = await fetch(
-      "https://www.globaltravel-holdings.com/payment/send-details",
-      {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          passengers: formattedData,
-          offerId: offerData.id,
-        }),
-      }
-    );
+  //     const response = await fetch(
+  //       "https://www.globaltravel-holdings.com/payment/send-details",
+  //       {
+  //         method: "POST",
+  //         credentials: "include",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           passengers: formattedData,
+  //           offerId: offerData.id,
+  //         }),
+  //       }
+  //     );
 
-    const data = await response.json();
+  //     const data = await response.json();
 
-    if (!data.status) {
-      return alert(data.message);
-    }
+  //     if (!data.status) {
+  //       return alert(data.message);
+  //     }
 
-    alert("Booking request submitted successfully!");
+  //     alert("Booking request submitted successfully!");
 
-    navigate("/flights");
+  //     navigate("/flights");
 
-  } catch (error) {
-    console.error(error);
+  //   } catch (error) {
+  //     console.error(error);
 
-    alert(
-      `Booking failed: ${error.message}`
-    );
-  }
-}
+  //     alert(
+  //       `Booking failed: ${error.message}`
+  //     );
+  //   }
+  // }
 
   // async function handleBooking() {
   //   try {
@@ -238,7 +240,136 @@ export default function PassengerForm() {
 
   // }
 
+async function handleBooking() {
+  try {
+    const formattedData = formData.map((p) => {
+      const passenger = {
+        firstName: p.firstName,
+        middleName: p.middleName,
+        lastName: p.lastName,
 
+        gender: p.gender === "male" ? "M" : "F",
+
+        dob: p.dob,
+        phone:p.phone,
+        email:p.email,
+        nationality: country,
+        type: p.type,
+      };
+
+      if (isInternational) {
+        passenger.passport = {
+          number: p.passportNumber,
+          country: issuingCountry,
+          expiry: p.passportExpiry,
+        };
+      }
+
+      return passenger;
+    });
+
+    const segment =
+      offerData?.slices?.[0]?.segments?.[0];
+
+    // console.log("🔥 OFFER DATA:", offerData);
+    // console.log("🔥 FIRST SEGMENT:", segment);
+
+  
+    const flightData = {
+      date:
+        segment?.departing_at
+          ? new Date(segment.departing_at).toLocaleDateString("en-IN")
+          : "N/A",
+
+      flightName:
+        segment?.marketing_carrier?.name || "N/A",
+
+      flightNumber:
+        segment?.marketing_carrier_flight_number || "N/A",
+
+      from: {
+        airport:
+          segment?.origin?.name ||
+          segment?.origin?.city_name ||
+          "N/A",
+
+        code:
+          segment?.origin?.iata_code || "N/A",
+
+        time:
+          segment?.departing_at
+            ? new Date(segment.departing_at).toLocaleTimeString(
+                "en-IN",
+                {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }
+              )
+            : "N/A",
+      },
+
+      to: {
+        airport:
+          segment?.destination?.name ||
+          segment?.destination?.city_name ||
+          "N/A",
+
+        code:
+          segment?.destination?.iata_code || "N/A",
+
+        time:
+          segment?.arriving_at
+            ? new Date(segment.arriving_at).toLocaleTimeString(
+                "en-IN",
+                {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }
+              )
+            : "N/A",
+      },
+    };
+
+    console.log("✈️ FLIGHT DATA BEING SENT:", flightData);
+
+   
+    const response = await fetch(
+      "https://www.globaltravel-holdings.com/payment/send-details",
+      {
+        method: "POST",
+
+        credentials: "include",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          passengers: formattedData,
+
+          offerId: offerData?.id,
+
+          flight: flightData,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!data.status) {
+      return alert(data.message);
+    }
+
+    alert("Booking request submitted successfully!");
+
+    navigate("/flights");
+
+  } catch (error) {
+    console.error("❌ BOOKING ERROR:", error);
+
+    alert(`Booking failed: ${error.message}`);
+  }
+}
 
   return (
     <div className="max-w-5xl mx-auto p-4">
@@ -265,8 +396,6 @@ export default function PassengerForm() {
           <div className="bg-green-50 text-green-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm">
             Child <span className="font-bold ml-1">{childLength}</span>
           </div>
-
-
         </div>
       </div>
 
@@ -359,6 +488,35 @@ export default function PassengerForm() {
                 value={p.dob}
                 onChange={(e) =>
                   handleChange(index, "dob", e.target.value)
+                }
+              />
+            </div>
+
+             <div>
+              <label className="block text-sm font-medium mb-2">
+                Phone Number
+              </label>
+             <input
+                type="tel"
+                className="w-full border rounded-xl p-3 mt-1 focus:ring-2 focus:ring-blue-400 outline-none"
+                value={p.phone}
+                onChange={(e) =>
+                  handleChange(index, "phone", e.target.value)
+                }
+              />
+            </div>
+
+
+             <div>
+              <label className="block text-sm font-medium mb-2">
+                Email ID
+              </label>
+              <input
+                type="email"
+                className="w-full border rounded-xl p-3 mt-1 focus:ring-2 focus:ring-blue-400 outline-none"
+                value={p.email}
+                onChange={(e) =>
+                  handleChange(index, "email", e.target.value)
                 }
               />
             </div>

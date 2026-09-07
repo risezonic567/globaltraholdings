@@ -48,6 +48,7 @@ export default function App() {
   let BookingBlogDetails = lazy(()=>import('./Pages/SupportAgencyBlogs/booking/BookingBlogDetails'))
   let FlightResult = lazy(() => import('./Components/FlightResult'))
   let Passengers = lazy(() => import('./Components/Passengers'))
+  // let VisualSitemap = lazy(() => import('./Components/VisualSitemap'))
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true })
@@ -98,7 +99,8 @@ export default function App() {
 
             <Route path='/agency-support/booking-blog' element = {<BookingBlogList/>}/>
             <Route path='/agency-support/booking-blog/:slug' element = {<BookingBlogDetails/>}/> */}
-
+            {/* <Route path='/sitemap' element = {<VisualSitemap/>}/> */}
+            
 
 
             <Route path='/flight-results' element={<FlightResult />} />
