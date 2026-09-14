@@ -2,7 +2,7 @@ import { Container, icons } from 'lucide-react';
 import React from 'react';
 import { motion, scale, stagger } from "framer-motion";
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+
 
 export default function OurServices() {
 
@@ -109,92 +109,89 @@ export default function OurServices() {
 
   return (
     <>
-     <Helmet>
-                    
-                    <link rel="canonical" href="https://www.globaltravel-holdings.com/services" />
-                </Helmet>
     
-    <section className='max-w-7xl mx-auto  py-5'>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className='text-center mb-14'
-      >
-        <h2 className='text-center text-3xl md:text-4xl font-bold mb-12 '>
-          Our <span className='bg-gradient-to-r from-green-400 to-gray-500 bg-clip-text text-transparent'>Services</span>
-        </h2>
+      <section className='max-w-7xl mx-auto  py-5'>
 
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className='text-center mb-14'
+        >
+          <h2 className='text-center text-3xl md:text-4xl font-bold mb-12 '>
+            Our <span className='bg-gradient-to-r from-green-400 to-gray-500 bg-clip-text text-transparent'>Services</span>
+          </h2>
+
+        </motion.div>
 
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-      >
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        >
 
-        {services.map((item, id) => {
+          {services.map((item, id) => {
 
-          let Icon = icons[item.icon];
+            let Icon = icons[item.icon];
 
-          return (
+            return (
 
-            <motion.div
-              key={id}
-              variants={cardAnimation}
-              whileHover={{
-                y: -10,
-                scale: 1.03,
-              }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="group relative p-[1px] rounded-[2rem] overflow-hidden"
-            >
+              <motion.div
+                key={id}
+                variants={cardAnimation}
+                whileHover={{
+                  y: -10,
+                  scale: 1.03,
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="group relative p-[1px] rounded-[2rem] overflow-hidden"
+              >
 
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.border} opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.border} opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm`} />
 
-              <div className="relative bg-white rounded-[2rem] p-7 h-full text-center shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                <div className="relative bg-white rounded-[2rem] p-7 h-full text-center shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
 
-                <motion.div
-                  whileHover={{
-                    rotate: 8,
-                    scale: 1.15,
-                  }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className={`mx-auto flex items-center justify-center w-20 h-20 rounded-full ${item.bg} mb-6 shadow-md`}
-                >
-                  <Icon className={item.color} size={32} />
-                </motion.div>
+                  <motion.div
+                    whileHover={{
+                      rotate: 8,
+                      scale: 1.15,
+                    }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className={`mx-auto flex items-center justify-center w-20 h-20 rounded-full ${item.bg} mb-6 shadow-md`}
+                  >
+                    <Icon className={item.color} size={32} />
+                  </motion.div>
 
-                <h3 className="text-lg font-bold mb-3 text-gray-800 leading-snug">
-                  {item.title}
-                </h3>
+                  <h3 className="text-lg font-bold mb-3 text-gray-800 leading-snug">
+                    {item.title}
+                  </h3>
 
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {item.description}
-                </p>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    {item.description}
+                  </p>
 
-               
 
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.4 }}
-                  className={`mt-6 h-[4px] mx-auto rounded-full bg-gradient-to-r ${item.border}`}
-                /> <Link to="tel:+91 8588809690" className=' p-1.5 bg-green-700 text-white hover:bg-green-800 transition rounded-lg  font-semibold'>
-                Book Now
-                </Link>
 
-              </div>
-            </motion.div>
-          );
-        })}
-      </motion.div>
-    </section>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileHover={{ width: "100%" }}
+                    transition={{ duration: 0.4 }}
+                    className={`mt-6 h-[4px] mx-auto rounded-full bg-gradient-to-r ${item.border}`}
+                  /> <Link to="tel:+91 8588809690" className=' p-1.5 bg-green-700 text-white hover:bg-green-800 transition rounded-lg  font-semibold'>
+                    Book Now
+                  </Link>
+
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </section>
     </>
   );
 }
