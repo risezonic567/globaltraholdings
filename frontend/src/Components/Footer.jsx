@@ -35,7 +35,7 @@ export default function Footer() {
   },
   {
     icon: FaLinkedinIn,
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7504365683112050688",
+    link: "https://www.linkedin.com/company/globaltravelbooking/posts/?feedView=all",
     label: "LinkedIn",
   },
   {
