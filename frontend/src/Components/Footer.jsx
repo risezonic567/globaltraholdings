@@ -13,6 +13,7 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
   FaYoutube,
+  FaPinterestSquare
 } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
@@ -23,25 +24,32 @@ export default function Footer() {
   const socialLinks = [
   {
     icon: FaFacebookF,
-    link: "https://www.facebook.com/globaltravelbookings/",
+    link: "https://www.facebook.com/globaltravelbookings",
     label: "Facebook",
   },
 
   {
     icon: FaInstagram,
-    link: "https://www.instagram.com/globaltravel.booking/",
+    link: "https://www.instagram.com/globaltravel.booking/?hl=en",
     label: "Instagram",
   },
   {
     icon: FaLinkedinIn,
-    link: "linkedin.com/company/globaltravelbooking/",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7504365683112050688",
     label: "LinkedIn",
   },
   {
     icon: FaYoutube,
-    link: "https://www.youtube.com/channel/UCA2Fp_jG4pq0L1Vv-cfLDng",
-    label: "LinkedIn",
+    link: "https://www.youtube.com/channel/UCaVDSG_1tmsoSXMFeEOn_aw",
+    label: "YouTube",
   },
+  {
+    icon:FaPinterestSquare,
+    link:"https://in.pinterest.com/globaltravelbooking/",
+    label:"Pinterest"
+  }
+
+  
 ];
 
   const fadeUp = {
