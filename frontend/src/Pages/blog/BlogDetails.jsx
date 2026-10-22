@@ -45,6 +45,12 @@ export default function BlogDetails() {
       />
     
       <meta property="og:image" content={post.coverImage} />
+      
+       {post.schema && (
+                    <script type="application/ld+json">
+                        {JSON.stringify(post.schema)}
+                    </script>
+                )}
 
       </Helmet>
 
