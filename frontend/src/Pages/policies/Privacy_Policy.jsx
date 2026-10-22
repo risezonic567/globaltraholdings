@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
                 8. Legal Disclosure
               </h2>
               <p className="mt-3 text-gray-600 leading-7 text-sm sm:text-base">
-                We may disclose information if required by law or when necessary to protect rights, property, or safety.
+                We may disclose information if required by law or when necessary to protect rights, property, or safety
               </p>
             </div>
           </div>
