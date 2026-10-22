@@ -23,7 +23,7 @@ import ReesetPassword from './Pages/loginSystem/password/ResetPassword'
 import ProtectedRoute from './Components/ProtectedRoutes'
 import { motion } from 'framer-motion'
 import NotFound from './Pages/ErrorPage'
-
+import ScrollToTop from './Components/ScrollToTop'
 
 export default function App() {
   let [loading, setLoading] = useState(true)
@@ -61,6 +61,8 @@ export default function App() {
     <>
       <Toaster position="top-right" />
       <BrowserRouter>
+        <ScrollToTop />
+
         <Navbar />
         <Suspense fallback={Loader}>
           <Routes>
