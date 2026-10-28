@@ -11,10 +11,9 @@ import {
 import { Helmet } from "react-helmet-async";
 
 export default function BlogList() {
- 
-  const blogdata = blogPosts.filter(
-    (item) => item.category?.toLowerCase() === "cheap-flights"
-  );
+  // Show all main-site blogs (any category). Do not filter by cheap-flights —
+  // agency lists (Travelocity/Booking) keep their own category filters.
+  const blogdata = blogPosts;
 
   return (
     <>
