@@ -1,3 +1,440 @@
+// import {
+//   Copyright,
+//   MapPin,
+//   PhoneCall,
+//   Mail,
+//   ArrowUpRight,
+// } from "lucide-react";
+
+// import React from "react";
+// import {
+//   FaFacebookF,
+//   FaInstagram,
+//   FaLinkedinIn,
+//   FaWhatsapp,
+//   FaYoutube,
+//   FaPinterestSquare
+// } from "react-icons/fa";
+
+// import { NavLink } from "react-router-dom";
+// import { motion } from "framer-motion";
+
+// export default function Footer() {
+
+//   const socialLinks = [
+//   {
+//     icon: FaFacebookF,
+//     link: "https://www.facebook.com/globaltravelbookings",
+//     label: "Facebook",
+//   },
+
+//   {
+//     icon: FaInstagram,
+//     link: "https://www.instagram.com/globaltravel.booking/?hl=en",
+//     label: "Instagram",
+//   },
+//   {
+//     icon: FaLinkedinIn,
+//     link: "https://www.linkedin.com/company/globaltravelbooking/posts/?feedView=all",
+//     label: "LinkedIn",
+//   },
+//   {
+//     icon: FaYoutube,
+//     link: "https://www.youtube.com/channel/UCaVDSG_1tmsoSXMFeEOn_aw",
+//     label: "YouTube",
+//   },
+//   {
+//     icon:FaPinterestSquare,
+//     link:"https://in.pinterest.com/globaltravelbooking/",
+//     label:"Pinterest"
+//   }
+
+  
+// ];
+
+//   const fadeUp = {
+//     hidden: { opacity: 0, y: 40 },
+//     visible: (i = 1) => ({
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         delay: i * 0.15,
+//         duration: 0.7,
+//         ease: "easeOut",
+//       },
+//     }),
+//   };
+
+//   return (
+//     <footer className="relative overflow-hidden bg-[#2b2b2b] text-white border-t border-white/10">
+
+
+//       <div className="absolute top-0 left-0 w-80 h-80 bg-green-500/10 blur-3xl rounded-full"></div>
+
+//       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gray-500/10 blur-3xl rounded-full"></div>
+
+
+//       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-80"></div>
+
+
+//       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+
+
+//         <motion.div
+//           variants={fadeUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           custom={1}
+//           className="space-y-6"
+//         >
+
+//           <NavLink
+//             to="/"
+//             className="inline-block group"
+//           >
+
+//             <img
+//               src="/images/logo/footerlogo.png"
+//               alt="logofooter"
+//               className="h-25 w-[150px] object-contain transition-transform duration-500 group-hover:scale-105"
+//             />
+
+//           </NavLink>
+
+//           <p className="text-gray-300 text-[15px] leading-relaxed border-l-2 border-emerald-500/60 pl-4">
+//             <span className="font-semibold text-white">
+//               Global Travel
+//             </span>{" "}
+//             is a trusted and modern travel platform designed to make your journey smooth, luxurious, and unforgettable with premium cruise, hotel, and vacation experiences.
+//           </p>
+
+//            <p className="text-gray-300 text-[15px] leading-relaxed border-l-2 border-emerald-500/60 pl-4">
+//             <span className="font-semibold text-white">
+//               Disclaimer:
+//             </span>{" "}
+//             Global Travel Booking is an independent travel agency. We partner with airlines and booking agencies worldwide. For full details, please see our Disclaimer.
+//           </p>
+
+//           {/* Social Icons */}
+
+//           <div className="flex gap-4 pt-2">
+//   {socialLinks.map(({ icon: Icon, link, label }) => (
+//     <a
+//       key={label}
+//       href={link}
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       aria-label={label}
+//       className="group w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
+//     >
+//       <Icon
+//         size={15}
+//         className="group-hover:scale-110 transition"
+//       />
+//     </a>
+//   ))}
+// </div>
+//         </motion.div>
+
+        
+
+//         {/* Quick Links */}
+
+//         <motion.div
+//           variants={fadeUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           custom={2}
+//         >
+
+//           <h2 className="text-sm font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
+//             Quick Exploration
+//           </h2>
+
+//           <div className="space-y-4 ">
+
+//             {[
+//               {name:"Home",path:"/"},
+//               {name:"About us",path:"/about-us"},
+//               {name:"Flights",path:"/flights"},
+//               {name:"Cars",path:"/cars"},
+//               {name:"Hotels",path:"/hotels"},
+//               {name:"Cruise",path:"/cruise"},
+//               {name:"Packages",path:"/packages"},
+//             ].map((item, i) => (
+
+//               <NavLink
+//                 key={i}
+//                 to={item.path}
+//                 className="group flex items-center gap-2 text-gray-300 font-semibold font-['Poppins'] hover:text-white transition-all duration-300 text-md"
+//               >
+
+//                 <span className="flex items-center gap-3">
+
+//                   <span className="w-0 group-hover:w-3 h-[2px] bg-emerald-500 transition-all duration-300"></span>
+
+//                   {item.name}
+
+//                 </span> 
+
+//                 <ArrowUpRight
+//                   size={15}
+//                   className="opacity-0 group-hover:opacity-100 transition-all duration-300"
+//                 />
+
+//               </NavLink>
+
+//             ))}
+
+//           </div>
+
+//         </motion.div>
+
+
+//         <motion.div
+//           variants={fadeUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           custom={3}
+//         >
+
+//           <h2 className="text-md font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
+//             Customer Support
+//           </h2>
+
+//           <div className="space-y-4">
+
+//             {[
+              
+//               { name: "Privacy Policy", path: "/privacy-policy" },
+//               { name: "Terms & Conditions", path: "/terms-conditions" },
+//               { name: "Refund Policy", path: "/refund-policy" },
+//               { name: "Contact Us", path: "/contact-us" },
+//               { name: "Disclaimer", path: "/disclaimer" },
+//               { name: "Services", path: "/services" },
+//               { name: "Blog", path: "/blog" },
+
+//             ].map((link, i) => (
+
+//               <NavLink
+//                 key={i}
+//                 to={link.path}
+//                 className="group flex items-center gap-2 font-['Poppins'] font-semibold text-gray-300 hover:text-white transition-all duration-300 text-md"
+//               >
+
+//                 <span className="flex items-center gap-3">
+
+//                   <span className="w-0 group-hover:w-3 h-[2px] bg-emerald-500 transition-all duration-300"></span>
+
+//                   {link.name}
+
+//                 </span>
+
+//                 <ArrowUpRight
+//                   size={15}
+//                   className="opacity-0 group-hover:opacity-100 transition-all duration-300"
+//                 />
+
+//               </NavLink>
+
+//             ))}
+
+//           </div>
+
+//         </motion.div>
+
+
+//         <motion.div
+//           variants={fadeUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           custom={4}
+//         >
+
+//           <h2 className="text-sm font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
+//             Get In Touch
+//           </h2>
+
+//           <div className="space-y-6">
+
+
+//             <div className="flex items-start gap-4 group">
+
+//               <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
+
+//                 <MapPin size={18} className="text-emerald-500" />
+
+//               </div>
+
+//               <p className="text-gray-4300 text-md leading-relaxed">
+//                USA Office:
+// 16192 Coastal Highway, Lewes, Delaware 19958- USA
+//               <br/><br/>
+//              India Office:
+// RZF 2/11,2nd Floor, Street No-2, Mahaveer Enclave, New Delhi, Delhi – 110045
+
+//               </p>
+
+              
+
+//             </div>
+
+
+//             <div className="flex gap-2 items-center group">
+
+//               <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
+
+//                 <Mail size={18} className="text-emerald-500" />
+
+//               </div>
+
+//               <NavLink
+//                 to="mailto:info@globaltravel-holdings.com"
+//                 className="text-gray-100 hover:text-white transition-colors duration-300 text-md"
+//               >
+//                 info@globaltravel-holdings.com
+//               </NavLink>
+
+//             </div>
+
+
+//             <div className="flex gap-2 items-center group">
+
+//               <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
+
+//                 <PhoneCall size={18} className="text-emerald-500" />
+
+//               </div>
+
+//               <NavLink
+//                 to="tel:+91 8588809690"
+//                 className="text-gray-100 hover:text-white transition-colors duration-300 text-md"
+//               >
+//                 +91  8588809690
+//               </NavLink>
+
+//             </div>
+
+//           </div>
+
+//         </motion.div>
+
+//       </div>
+
+
+//       <div className="border-t border-white/10 bg-black/40 backdrop-blur-xl relative z-10">
+
+//         <div className="max-w-7xl mx-auto py-5 px-20 flex flex-col md:flex-row justify-between items-center gap-4  tracking-wider text-gray-200">
+              
+
+//           <div className="flex items-center gap-2">
+
+//             <Copyright size={13} className="text-emerald-500" />
+
+//             <span className="text-md">
+//               © 2026 Global Travel Holdings LLC. All Rights Reserved.
+//             </span>
+
+//           </div>
+
+//           <div className="flex gap-6">
+
+//               <NavLink
+//               to="/privacy-policy"
+//               className="hover:text-emerald-400 transition"
+//             >
+//               Privacy Policy
+//             </NavLink>
+
+//             <NavLink
+//               to="/terms-conditions"
+//               className="hover:text-emerald-400 transition"
+//             >
+//               Terms & Conditions
+//             </NavLink>
+
+          
+
+//             <NavLink
+//               to="/refund-policy"
+//               className="hover:text-emerald-400 transition"
+//             >
+//             </NavLink>
+
+//           </div>
+
+//         </div>
+
+//       </div>
+
+
+//       <div className="fixed bottom-6  right-7 z-50">
+
+//         <div className="relative group">
+
+//           <span className="absolute inset-0 rounded-full bg-emerald-500/40 animate-ping opacity-70"></span>
+
+//           <motion.a
+//         href="https://wa.me/919711110975"
+//         target="_blank"
+//         rel="noopener noreferrer"
+//         className="
+//           group
+//           relative
+//           flex
+//           items-center
+//           gap-3
+//           bg-green-500
+//           text-white
+//           rounded-full
+//           px-5
+//           py-4
+//           shadow-[0_10px_30px_rgba(34,197,94,0.5)]
+//           overflow-hidden
+//         "
+//         animate={{
+//           y: [0, -6, 0],
+//         }}
+//         transition={{
+//           duration: 2,
+//           repeat: Infinity,
+//           ease: "easeInOut",
+//         }}
+//         whileHover={{
+//           scale: 1.05,
+//         }}
+//         whileTap={{
+//           scale: 0.95,
+//         }}
+//       >
+//         <FaWhatsapp className="text-3xl shrink-0" />
+
+//         <span
+//           className="
+//             hidden
+//             md:block
+//             font-medium
+//             whitespace-nowrap
+//           "
+//         >
+//           Chat With Us
+//         </span>
+//       </motion.a>
+
+//         </div>
+
+//       </div>
+
+//     </footer>
+//   );
+// }
+
+
+
 import {
   Copyright,
   MapPin,
@@ -13,44 +450,40 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
   FaYoutube,
-  FaPinterestSquare
+  FaPinterestSquare,
 } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Footer() {
-
   const socialLinks = [
-  {
-    icon: FaFacebookF,
-    link: "https://www.facebook.com/globaltravelbookings",
-    label: "Facebook",
-  },
-
-  {
-    icon: FaInstagram,
-    link: "https://www.instagram.com/globaltravel.booking/?hl=en",
-    label: "Instagram",
-  },
-  {
-    icon: FaLinkedinIn,
-    link: "https://www.linkedin.com/company/globaltravelbooking/posts/?feedView=all",
-    label: "LinkedIn",
-  },
-  {
-    icon: FaYoutube,
-    link: "https://www.youtube.com/channel/UCaVDSG_1tmsoSXMFeEOn_aw",
-    label: "YouTube",
-  },
-  {
-    icon:FaPinterestSquare,
-    link:"https://in.pinterest.com/globaltravelbooking/",
-    label:"Pinterest"
-  }
-
-  
-];
+    {
+      icon: FaFacebookF,
+      link: "https://www.facebook.com/globaltravelbookings",
+      label: "Facebook",
+    },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/globaltravel.booking/?hl=en",
+      label: "Instagram",
+    },
+    {
+      icon: FaLinkedinIn,
+      link: "https://www.linkedin.com/company/globaltravelbooking/posts/?feedView=all",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaYoutube,
+      link: "https://www.youtube.com/channel/UCaVDSG_1tmsoSXMFeEOn_aw",
+      label: "YouTube",
+    },
+    {
+      icon: FaPinterestSquare,
+      link: "https://in.pinterest.com/globaltravelbooking/",
+      label: "Pinterest",
+    },
+  ];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -67,19 +500,15 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-[#2b2b2b] text-white border-t border-white/10">
-
-
       <div className="absolute top-0 left-0 w-80 h-80 bg-green-500/10 blur-3xl rounded-full"></div>
 
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gray-500/10 blur-3xl rounded-full"></div>
 
-
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-80"></div>
 
-
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
-
-
+      {/* Main grid: width badhai gayi hai (max-w-[1600px]) */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] gap-12 relative z-10">
+        {/* Brand */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -88,59 +517,49 @@ export default function Footer() {
           custom={1}
           className="space-y-6"
         >
-
-          <NavLink
-            to="/"
-            className="inline-block group"
-          >
-
+          <NavLink to="/" className="inline-block group">
             <img
               src="/images/logo/footerlogo.png"
               alt="logofooter"
-              className="h-25 w-[150px] object-contain transition-transform duration-500 group-hover:scale-105"
+              className="h-24 w-[150px] object-contain transition-transform duration-500 group-hover:scale-105"
             />
-
           </NavLink>
 
           <p className="text-gray-300 text-[15px] leading-relaxed border-l-2 border-emerald-500/60 pl-4">
-            <span className="font-semibold text-white">
-              Global Travel
-            </span>{" "}
-            is a trusted and modern travel platform designed to make your journey smooth, luxurious, and unforgettable with premium cruise, hotel, and vacation experiences.
+            <span className="font-semibold text-white">Global Travel</span>{" "}
+            is a trusted and modern travel platform designed to make your
+            journey smooth, luxurious, and unforgettable with premium cruise,
+            hotel, and vacation experiences.
           </p>
 
-           <p className="text-gray-300 text-[15px] leading-relaxed border-l-2 border-emerald-500/60 pl-4">
-            <span className="font-semibold text-white">
-              Disclaimer:
-            </span>{" "}
-            Global Travel Booking is an independent travel agency. We partner with airlines and booking agencies worldwide. For full details, please see our Disclaimer.
+          <p className="text-gray-300 text-[15px] leading-relaxed border-l-2 border-emerald-500/60 pl-4">
+            <span className="font-semibold text-white">Disclaimer:</span>{" "}
+            Global Travel Booking is an independent travel agency. We partner
+            with airlines and booking agencies worldwide. For full details,
+            please see our Disclaimer.
           </p>
 
           {/* Social Icons */}
-
           <div className="flex gap-4 pt-2">
-  {socialLinks.map(({ icon: Icon, link, label }) => (
-    <a
-      key={label}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className="group w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
-    >
-      <Icon
-        size={15}
-        className="group-hover:scale-110 transition"
-      />
-    </a>
-  ))}
-</div>
+            {socialLinks.map(({ icon: Icon, link, label }) => (
+              <a
+                key={label}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="group w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg"
+              >
+                <Icon
+                  size={15}
+                  className="group-hover:scale-110 transition"
+                />
+              </a>
+            ))}
+          </div>
         </motion.div>
 
-        
-
         {/* Quick Links */}
-
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -148,51 +567,40 @@ export default function Footer() {
           viewport={{ once: true }}
           custom={2}
         >
-
           <h2 className="text-sm font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
             Quick Exploration
           </h2>
 
-          <div className="space-y-4 ">
-
+          <div className="space-y-4">
             {[
-              {name:"Home",path:"/"},
-              {name:"About us",path:"/about-us"},
-              {name:"Flights",path:"/flights"},
-              {name:"Cars",path:"/cars"},
-              {name:"Hotels",path:"/hotels"},
-              {name:"Cruise",path:"/cruise"},
-              {name:"Packages",path:"/packages"},
+              { name: "Home", path: "/" },
+              { name: "About us", path: "/about-us" },
+              { name: "Flights", path: "/flights" },
+              { name: "Cars", path: "/cars" },
+              { name: "Hotels", path: "/hotels" },
+              { name: "Cruise", path: "/cruise" },
+              { name: "Packages", path: "/packages" },
             ].map((item, i) => (
-
               <NavLink
                 key={i}
                 to={item.path}
                 className="group flex items-center gap-2 text-gray-300 font-semibold font-['Poppins'] hover:text-white transition-all duration-300 text-md"
               >
-
                 <span className="flex items-center gap-3">
-
                   <span className="w-0 group-hover:w-3 h-[2px] bg-emerald-500 transition-all duration-300"></span>
-
                   {item.name}
-
-                </span> 
+                </span>
 
                 <ArrowUpRight
                   size={15}
                   className="opacity-0 group-hover:opacity-100 transition-all duration-300"
                 />
-
               </NavLink>
-
             ))}
-
           </div>
-
         </motion.div>
 
-
+        {/* Customer Support */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -200,15 +608,12 @@ export default function Footer() {
           viewport={{ once: true }}
           custom={3}
         >
-
-          <h2 className="text-md font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
+          <h2 className="text-sm font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
             Customer Support
           </h2>
 
           <div className="space-y-4">
-
             {[
-              
               { name: "Privacy Policy", path: "/privacy-policy" },
               { name: "Terms & Conditions", path: "/terms-conditions" },
               { name: "Refund Policy", path: "/refund-policy" },
@@ -216,37 +621,27 @@ export default function Footer() {
               { name: "Disclaimer", path: "/disclaimer" },
               { name: "Services", path: "/services" },
               { name: "Blog", path: "/blog" },
-
             ].map((link, i) => (
-
               <NavLink
                 key={i}
                 to={link.path}
                 className="group flex items-center gap-2 font-['Poppins'] font-semibold text-gray-300 hover:text-white transition-all duration-300 text-md"
               >
-
                 <span className="flex items-center gap-3">
-
                   <span className="w-0 group-hover:w-3 h-[2px] bg-emerald-500 transition-all duration-300"></span>
-
                   {link.name}
-
                 </span>
 
                 <ArrowUpRight
                   size={15}
                   className="opacity-0 group-hover:opacity-100 transition-all duration-300"
                 />
-
               </NavLink>
-
             ))}
-
           </div>
-
         </motion.div>
 
-
+        {/* Get In Touch */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -254,96 +649,71 @@ export default function Footer() {
           viewport={{ once: true }}
           custom={4}
         >
-
           <h2 className="text-sm font-bold uppercase tracking-[3px] text-emerald-500 mb-7">
             Get In Touch
           </h2>
 
           <div className="space-y-6">
-
-
             <div className="flex items-start gap-4 group">
-
               <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
-
                 <MapPin size={18} className="text-emerald-500" />
-
               </div>
 
-              <p className="text-gray-4300 text-md leading-relaxed">
-                16192 Coastal Highway,
+              <p className="text-gray-300 text-md leading-relaxed">
+             <b>   USA Office: </b>
                 <br />
-                Lewes, Delaware 19958, County of Sussex, USA<br/>
-              <br/>
-              Delhi Address: RZF 2/11,2nd Floor, Street No-2, Mahaveer Enclave, New Delhi, Delhi – 110045
-
+                16192 Coastal Highway, Lewes, Delaware 19958- USA
+                <br />
+                <br />
+             <b> India Office: </b>   
+                <br />
+                RZF 2/11, 2nd Floor, Street No-2, Mahaveer Enclave, New Delhi,
+                Delhi – 110045
               </p>
-
-              
-
             </div>
 
-
             <div className="flex gap-2 items-center group">
-
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
-
+              <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
                 <Mail size={18} className="text-emerald-500" />
-
               </div>
 
-              <NavLink
-                to="mailto:info@globaltravel-holdings.com"
-                className="text-gray-100 hover:text-white transition-colors duration-300 text-md"
+              <a
+                href="mailto:info@globaltravel-holdings.com"
+                className="text-gray-100 hover:text-white transition-colors duration-300 text-md break-all"
               >
                 info@globaltravel-holdings.com
-              </NavLink>
-
+              </a>
             </div>
-
 
             <div className="flex gap-2 items-center group">
-
-              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
-
+              <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all duration-300">
                 <PhoneCall size={18} className="text-emerald-500" />
-
               </div>
 
-              <NavLink
-                to="tel:+91 8588809690"
+              <a
+                href="tel:+918588809690"
                 className="text-gray-100 hover:text-white transition-colors duration-300 text-md"
               >
-                +91  8588809690
-              </NavLink>
-
+                +91 8588809690
+              </a>
             </div>
-
           </div>
-
         </motion.div>
-
       </div>
 
-
+      {/* Bottom bar */}
       <div className="border-t border-white/10 bg-black/40 backdrop-blur-xl relative z-10">
-
-        <div className="max-w-7xl mx-auto py-5 px-20 flex flex-col md:flex-row justify-between items-center gap-4  tracking-wider text-gray-200">
-              
-
+        <div className="max-w-[1600px] mx-auto py-5 px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 tracking-wider text-gray-200">
           <div className="flex items-center gap-2">
-
             <Copyright size={13} className="text-emerald-500" />
 
             <span className="text-md">
               © 2026 Global Travel Holdings LLC. All Rights Reserved.
             </span>
-
           </div>
 
-          <div className="flex gap-6">
-
-              <NavLink
+          <div className="flex flex-wrap justify-center gap-6">
+            <NavLink
               to="/privacy-policy"
               className="hover:text-emerald-400 transition"
             >
@@ -357,78 +727,43 @@ export default function Footer() {
               Terms & Conditions
             </NavLink>
 
-          
-
             <NavLink
               to="/refund-policy"
               className="hover:text-emerald-400 transition"
             >
+              Refund Policy
             </NavLink>
-
           </div>
-
         </div>
-
       </div>
 
-
-      <div className="fixed bottom-6  right-7 z-50">
-
+      {/* WhatsApp floating button */}
+      {/* <div className="fixed bottom-24 right-7 z-50">
         <div className="relative group">
-
           <span className="absolute inset-0 rounded-full bg-emerald-500/40 animate-ping opacity-70"></span>
 
           <motion.a
-        href="https://wa.me/919711110975"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-          group
-          relative
-          flex
-          items-center
-          gap-3
-          bg-green-500
-          text-white
-          rounded-full
-          px-5
-          py-4
-          shadow-[0_10px_30px_rgba(34,197,94,0.5)]
-          overflow-hidden
-        "
-        animate={{
-          y: [0, -6, 0],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        whileHover={{
-          scale: 1.05,
-        }}
-        whileTap={{
-          scale: 0.95,
-        }}
-      >
-        <FaWhatsapp className="text-3xl shrink-0" />
+            href="https://wa.me/918588809690"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex items-center gap-3 bg-green-500 text-white rounded-full px-5 py-4 shadow-[0_10px_30px_rgba(34,197,94,0.5)] overflow-hidden"
+            animate={{ y: [0, -6, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaWhatsapp className="text-3xl shrink-0" />
 
-        <span
-          className="
-            hidden
-            md:block
-            font-medium
-            whitespace-nowrap
-          "
-        >
-          Chat With Us
-        </span>
-      </motion.a>
-
+            <span className="hidden md:block font-medium whitespace-nowrap">
+              Chat With Us
+            </span>
+          </motion.a>
         </div>
-
-      </div>
-
+      </div> */}
     </footer>
   );
 }

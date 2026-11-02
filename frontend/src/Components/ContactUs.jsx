@@ -83,9 +83,12 @@ export default function ContactUs() {
                         <div>
                             <p className="font-semibold flex gap-2"><MapPin size={24} /> Address</p>
                             <p className="text-sm">
-                                16192 Coastal Highway,
-                                Lewes, Delaware 19958, County of Sussex, USA<br /><br />
-<b>Delhi Address:</b> RZF 2/11,2nd Floor, Street No-2, Mahaveer Enclave, New Delhi, Delhi – 110045
+                              <b>USA Office:</b>
+                               16192 Coastal Highway, Lewes, Delaware 19958- USA
+                              <br />
+                              <br />
+                              <b>India Office:</b>
+                               RZF 2/11,2nd Floor, Street No-2, Mahaveer Enclave, New Delhi, Delhi – 110045
                             </p>
                         </div>
 

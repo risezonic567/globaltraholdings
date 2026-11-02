@@ -24,6 +24,7 @@ import ProtectedRoute from './Components/ProtectedRoutes'
 import { motion } from 'framer-motion'
 import NotFound from './Pages/ErrorPage'
 import ScrollToTop from './Components/ScrollToTop'
+import WhatsAppButton from './Components/WhatsAppButton'
 
 export default function App() {
   let [loading, setLoading] = useState(true)
@@ -111,6 +112,7 @@ export default function App() {
         </Suspense>
         {/* <Marquee /> */}
         <Footer />
+        <WhatsAppButton />
       </BrowserRouter>
     </>
   )
