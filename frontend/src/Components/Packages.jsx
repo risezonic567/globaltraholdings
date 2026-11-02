@@ -125,13 +125,13 @@ item: "https://www.globaltravel-holdings.com/packages"
                                 className='flex justify-center gap-4 mt-8 flex-wrap'
                             >
 
-                                <button className='bg-emerald-500 hover:bg-emerald-600 text-white transition-all duration-300 px-8 py-3 rounded-full font-semibold shadow-lg'>
+                                <a href="/packages" className='bg-emerald-500 hover:bg-emerald-600 text-white transition-all duration-300 px-8 py-3 rounded-full font-semibold shadow-lg'>
                                     Explore Packages
-                                </button>
+                                </a>
 
-                                <button className='border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-3 rounded-full font-semibold'>
+                                <a href="/contact-us" className='border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-3 rounded-full font-semibold'>
                                     Contact Us
-                                </button>
+                                </a>
 
                             </motion.div>
 
