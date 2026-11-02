@@ -85,22 +85,21 @@ export default function ContactUs() {
                             <p className="text-sm">
                                 16192 Coastal Highway,
                                 Lewes, Delaware 19958, County of Sussex, USA<br /><br />
-                                <b>Gurugram Office:</b>
-                                 07th Floor, Gate No 3 & 4, Ambience Island, DLF Phase 3, NH-8, Gurugram, Haryana 122002
+<b>Delhi Address:</b> RZF 2/11,2nd Floor, Street No-2, Mahaveer Enclave, New Delhi, Delhi – 110045
                             </p>
                         </div>
 
                         <div>
                             <p className="font-semibold flex gap-2"><FaEnvelope className='text-lg' /> Email</p>
-                            <NavLink to="mailto:Info@globaltravelbooking.com" className="text-green-600 hover:underline">
-                                Info@globaltravelbooking.com
+                            <NavLink to="mailto:info@globaltravel-holdings.com" className="text-green-600 hover:underline">
+                                info@globaltravel-holdings.com
                             </NavLink><br />
-                            <NavLink to="mailto:support@globaltravelbooking.com" className="text-green-600 hover:underline">
-                                support@globaltravelbooking.com
+                            {/* <NavLink to="mailto:info@globaltravel-holdings.com" className="text-green-600 hover:underline">
+                                info@globaltravel-holdings.com
                             </NavLink><br />
-                            <NavLink to="mailto:hr@globaltravelbooking.com" className="text-green-600 hover:underline">
-                                hr@globaltravelbooking.com
-                            </NavLink>
+                            <NavLink to="mailto:info@globaltravel-holdings.com" className="text-green-600 hover:underline">
+                                info@globaltravel-holdings.com
+                            </NavLink> */}
 
                         </div>
 

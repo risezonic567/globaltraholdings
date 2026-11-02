@@ -275,7 +275,7 @@ export default function Footer() {
                 <br />
                 Lewes, Delaware 19958, County of Sussex, USA<br/>
               <br/>
-              Gurugram Office:  07th Floor, Gate No 3 & 4, Ambience Island, DLF Phase 3, NH-8, Gurugram, Haryana 122002
+              Delhi Address: RZF 2/11,2nd Floor, Street No-2, Mahaveer Enclave, New Delhi, Delhi – 110045
 
               </p>
 
@@ -293,10 +293,10 @@ export default function Footer() {
               </div>
 
               <NavLink
-                to="mailto:Info@globaltravelbooking.com"
+                to="mailto:info@globaltravel-holdings.com"
                 className="text-gray-100 hover:text-white transition-colors duration-300 text-md"
               >
-                Info@globaltravelbooking.com
+                info@globaltravel-holdings.com
               </NavLink>
 
             </div>
